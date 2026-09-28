@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:title" content="Bright Hope Worship IN Busan">
+<meta property="og:description" content="2026.11.7(토) 16:00 부산 영주교회 · 한일 연합 일본어 찬양집회 안내와 참가 신청">
+<meta property="og:image" content="img/hero-wide.jpg">
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Bright Hope Worship IN Busan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gothic+A1:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700;800&display=swap">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#2A1B10;
+  --surface:#3B2717;
+  --surface-2:#4A3220;
+  --text:#FFF6E8;
+  --muted:rgba(255,246,232,.72);
+  --faint:rgba(255,246,232,.5);
+  --line:rgba(255,246,232,.14);
+  --gold:#FFC870;
+  --gold-ink:#2A1B10;
+  --sky:#9ED8F5;
+  --kakao:#FEE500;
+  --display:'Black Han Sans','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --display-w:400;
+  --body:'Gothic A1','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
+}
+:root[lang="ja"]{
+  --display:'M PLUS 1p','Hiragino Sans','Yu Gothic',sans-serif;
+  --display-w:800;
+  --body:'M PLUS 1p','Hiragino Sans','Yu Gothic',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere;-webkit-font-smoothing:antialiased;padding-bottom:88px}
+:root[lang="ja"] body{word-break:normal;line-break:strict}
+a{color:var(--sky)}
+h1,h2,h3{font-family:var(--display);font-weight:var(--display-w);margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-inline:20px}
+
+/* language switch */
+.lang{position:absolute;top:14px;right:16px;z-index:3;display:flex;padding:3px;border-radius:999px;background:rgba(42,27,16,.72);backdrop-filter:blur(6px);border:1px solid var(--line)}
+.lang button{min-height:34px;padding:0 14px;border:0;border-radius:999px;background:transparent;color:var(--muted);font:700 13px/1 'Gothic A1','M PLUS 1p',sans-serif;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink)}
+.lang button:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--surface)}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,27,16,.55) 0%,rgba(42,27,16,0) 22%,rgba(42,27,16,.1) 45%,rgba(42,27,16,.86) 72%,var(--bg) 100%)}
+.hero-in{position:relative;z-index:1;width:100%;padding-block:0 44px}
+.handle{position:absolute;top:24px;left:20px;z-index:1;font-size:12px;letter-spacing:.14em;color:var(--gold);opacity:.85}
+.eyebrow{font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.04em;margin-bottom:12px}
+.hero h1{font-size:clamp(32px,7.4vw,60px);line-height:1.18;margin-bottom:18px}
+.hero .when{font-size:17px;color:var(--muted);margin-bottom:26px}
+.hero .when b{color:var(--text);font-weight:700}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:12px;font:700 17px/1.2 var(--body);text-decoration:none;border:0;cursor:pointer;text-align:center}
+.btn-gold{background:var(--gold);color:var(--gold-ink)}
+.btn-gold:hover{filter:brightness(1.06)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid rgba(255,246,232,.3)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-kakao{background:var(--kakao);color:#191600}
+.btn:focus-visible,.copy:focus-visible,a:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.btn[aria-disabled="true"]{background:var(--surface-2);color:var(--faint);cursor:default}
+.dday{font-size:14px;color:var(--muted)}
+.dday b{color:var(--gold)}
+
+/* sections */
+section{padding-block:56px;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.kicker{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em;margin-bottom:10px}
+h2{font-size:clamp(26px,5vw,36px);line-height:1.32;margin-bottom:22px}
+.lead{font-size:17px;color:var(--muted);max-width:62ch}
+.lead + .lead{margin-top:14px}
+.hl{color:var(--gold);font-weight:700}
+
+/* info list */
+.info{display:grid;grid-template-columns:96px 1fr;margin:0;border-top:1px solid var(--line)}
+.info dt,.info dd{margin:0;padding:16px 0;border-bottom:1px solid var(--line)}
+.info dt{font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.04em;padding-top:19px}
+.info dd{font-size:17px;font-weight:500}
+.info small{display:block;font-size:14px;font-weight:400;color:var(--faint);margin-top:2px}
+.info a{font-size:14px;font-weight:500}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.stat{background:var(--surface);border-radius:14px;padding:18px 16px}
+.stat b{display:block;font:var(--display-w) clamp(26px,5.4vw,34px)/1.1 var(--display);color:var(--gold);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.stat span{font-size:13px;line-height:1.5;color:var(--muted);display:block}
+.figure{border-radius:16px;overflow:hidden;aspect-ratio:16/9;max-width:100%;margin-top:28px;background:var(--surface)}
+.figure img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* who */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.chip{padding:10px 16px;border-radius:999px;background:var(--surface);font-weight:500;font-size:16px}
+
+/* songs */
+.soon-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.soon{border:1px dashed rgba(158,216,245,.45);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:6px}
+.soon b{font-size:17px}
+.soon span{font-size:14px;color:var(--muted)}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--sky);border:1px solid rgba(158,216,245,.5);border-radius:999px;padding:3px 10px;margin-bottom:6px}
+
+/* steps */
+.steps{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:4px 12px;background:var(--surface);border-radius:14px;padding:18px}
+.steps li::before{counter-increment:s;content:counter(s);grid-row:span 2;width:32px;height:32px;border-radius:50%;background:var(--gold);color:var(--gold-ink);font:var(--display-w) 17px/32px var(--display);text-align:center}
+.steps b{font-size:17px}
+.steps span{font-size:15px;color:var(--muted)}
+.asks{margin-top:22px;font-size:15px;color:var(--muted)}
+.asks b{color:var(--text)}
+.form-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.pending{font-size:14px;color:var(--sky)}
+
+/* prayer */
+.prayers{list-style:none;padding:0;margin:0;display:grid;gap:2px}
+.prayers li{display:grid;grid-template-columns:32px 1fr;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.prayers li::before{content:attr(data-n);font:var(--display-w) 20px/1.35 var(--display);color:var(--gold)}
+.pray-room{margin-top:24px;background:var(--surface);border-radius:14px;padding:20px;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;justify-content:space-between}
+.pray-room p{font-size:15px;color:var(--muted);flex:1 1 280px}
+.pray-room p b{color:var(--text);display:block;font-size:17px;margin-bottom:2px}
+.note{margin-top:18px;font-size:14px;color:var(--faint)}
+
+/* support */
+.budget{margin:0 0 26px;border-top:1px solid var(--line)}
+.budget div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}
+.budget div span:last-child{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.budget .total{font-weight:700}
+.budget .total span:last-child{color:var(--gold)}
+.ways{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.way{background:var(--surface);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.way .lab{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--gold)}
+.way h3{font-family:var(--body);font-weight:700;font-size:18px;line-height:1.4}
+.way ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted);display:grid;gap:4px}
+.way .no{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;user-select:all}
+.way small{font-size:14px;color:var(--muted)}
+.way .btn{margin-top:auto;min-height:46px;font-size:15px;padding:0 18px}
+.copy{margin-top:auto;min-height:46px;padding:0 16px;border-radius:12px;border:1px solid rgba(255,246,232,.3);background:transparent;color:var(--text);font:700 15px var(--body);cursor:pointer}
+.copy[data-done="1"]{color:var(--gold);border-color:var(--gold)}
+
+/* next: festival */
+.next{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center}
+.next-img{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1/1;max-width:100%;background:#6B5AA8}
+.next-img img{width:100%;height:100%;object-fit:cover;display:block}
+.soon-badge{position:absolute;left:12px;bottom:12px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.92);color:#4B3A8C;font:700 12px/1 'Gothic A1',sans-serif;letter-spacing:.12em}
+.next h2{margin-bottom:14px}
+
+footer{padding-block:40px 32px;border-top:1px solid var(--line);font-size:13px;color:var(--faint)}
+footer b{color:var(--muted);font-weight:500}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;background:rgba(42,27,16,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px))}
+.bar-in{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar .t{font-size:14px;line-height:1.4;color:var(--muted)}
+.bar .t b{display:block;color:var(--text);font-size:15px}
+.bar .btn{min-height:46px;padding:0 20px;font-size:16px;flex-shrink:0}
+
+@media (max-width:719px){
+  .hero{display:block;min-height:0}
+  .hero picture{position:relative;display:block}
+  .hero img{position:relative;height:auto;aspect-ratio:9/8;object-position:center top}
+  .hero-in{margin-top:-96px}
+  .soon-grid,.ways{grid-template-columns:1fr}
+  .next{grid-template-columns:1fr}
+  .next-img{max-width:340px}
+}
+@media (min-width:720px){
+  .hero{min-height:min(88vh,820px);align-items:center}
+  .hero::after{background:linear-gradient(90deg,rgba(42,27,16,.92) 0%,rgba(42,27,16,.78) 30%,rgba(42,27,16,.2) 48%,rgba(42,27,16,0) 60%),linear-gradient(180deg,rgba(42,27,16,.5) 0%,rgba(42,27,16,0) 20%,rgba(42,27,16,0) 80%,var(--bg) 100%)}
+  .hero-in{max-width:1240px;padding-inline:48px;padding-block:80px}
+  .hero-in > *{max-width:560px}
+  .hero h1{font-size:clamp(38px,3.8vw,54px)}
+  .handle{top:30px;left:40px}
+  .lang{top:22px;right:28px}
+  .info{grid-template-columns:120px 1fr}
+}
+@media (max-width:520px){
+  .handle{display:none}
+}
+@media (max-width:420px){
+  .stats{gap:8px}
+  .stat{padding:14px 10px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero img{animation:drift 18s ease-out both}
+  @keyframes drift{from{transform:scale(1.06)}to{transform:scale(1)}}
+}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <picture>
+    <source media="(min-width:720px)" srcset="img/hero-wide.jpg">
+    <img src="img/hero-tall.jpg" data-i18n-alt="heroAlt" alt="교회 안에서 환하게 웃으며 손가락으로 브이를 그린 한일 청소년·청년 여덟 명의 일러스트">
+  </picture>
+  <div class="handle">BRIGHT HOPE WORSHIP IN BUSAN</div>
+  <div class="lang" role="group" aria-label="언어 / 言語">
+    <button type="button" data-lang="ko" aria-pressed="true">한국어</button>
+    <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+  </div>
+  <div class="hero-in wrap">
+    <div class="eyebrow" data-i18n="eyebrow">한일 연합 일본어 찬양집회</div>
+    <h1 data-i18n="h1">일본의 청소년·청년들이<br>하나님을 찬양하기 위해<br>부산에 옵니다.</h1>
+    <p class="when" data-i18n="when"><b>2026년 11월 7일(토) 오후 4시–6시 30분</b><br>부산 영주교회 본당 · 참가비 무료 · 사전 신청제</p>
+    <div class="cta-row">
+      <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaHero">참가 신청하기</a>
+      <span class="dday js-dday"></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="info" aria-labelledby="h-info">
+    <div class="kicker" data-i18n="kInfo">집회 안내</div>
+    <h2 id="h-info" data-i18n="hInfo">11월 7일, 영주교회에서 만나요</h2>
+    <dl class="info">
+      <dt data-i18n="dtWhen">일시</dt><dd data-i18n="ddWhen">2026년 11월 7일(토) 16:00–18:30</dd>
+      <dt data-i18n="dtWhere">장소</dt><dd><span data-i18n="ddWhere">부산 영주교회 본당</span><small>부산광역시 중구 대영로 226번안길 6</small><a href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EC%98%81%EC%A3%BC%EA%B5%90%ED%9A%8C" target="_blank" rel="noopener" data-i18n="map">네이버 지도에서 보기 ↗</a></dd>
+      <dt data-i18n="dtPark">주차</dt><dd data-i18n="ddPark">봉래초등학교 주차장<small>주말 무료 · 교회까지 걸어서 2–3분</small></dd>
+      <dt data-i18n="dtJoin">참가</dt><dd><span data-i18n="ddJoin">사전 신청제 · 참가비 무료</span><small class="js-deadline-text"></small></dd>
+      <dt data-i18n="dtTeam">방문단</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 15명 내외</dd>
+      <dt data-i18n="dtHost">주최</dt><dd data-i18n="host">일본선교연구소 · 에클레시아 · 워십네이션스 · 브라이트호프</dd>
+    </dl>
+  </section>
+
+  <section id="why" aria-labelledby="h-why">
+    <div class="kicker" data-i18n="kWhy">왜 이 집회인가요</div>
+    <h2 id="h-why" data-i18n="hWhy">비행기로 1시간,<br>그런데 전혀 다른 풍경</h2>
+    <p class="lead" data-i18n="why1">일본은 그리스도인이 인구의 <span class="hl">0.4%</span>에도 미치지 못하는 나라입니다. 골목마다 신사와 절이 있지만 십자가를 찾기는 어렵고, 고령화로 교회에서 또래 친구를 만나기도 쉽지 않습니다.</p>
+    <p class="lead" data-i18n="why2">이번에 부산을 찾는 브라이트호프와 워십네이션스의 청소년·청년들은 그 안에서도 "찬양으로 하나님을 예배하겠다"는 부르심을 품은 이들입니다.</p>
+    <div class="stats">
+      <div class="stat"><b>0.4%</b><span data-i18n="st1">일본의 그리스도인 비율</span></div>
+      <div class="stat"><b>214km</b><span data-i18n="st2">부산–후쿠오카 직선거리</span></div>
+      <div class="stat"><b>12%</b><span data-i18n="st3">한국 청소년 중 개신교인</span></div>
+    </div>
+    <p class="lead" data-i18n="why3">11월 7일, 이들과 함께 손을 들고 찬양하며 기도해 주세요. 한국 교회의 뜨거운 찬양을 경험하는 이 며칠이 후쿠오카와 일본에서 오래도록 이어질 불씨가 될 수 있습니다. 이번 만남은 <span class="hl">2027년 블레싱힐 페스티벌</span>을 향한 첫걸음이기도 합니다.</p>
+    <div class="figure"><img src="img/plane.jpg" data-i18n-alt="planeAlt" alt="노을 진 하늘 아래 비행기 창밖으로 보이는 부산 해안 일러스트" loading="lazy"></div>
+  </section>
+
+  <section id="who" aria-labelledby="h-who">
+    <div class="kicker" data-i18n="kWho">초청 대상</div>
+    <h2 id="h-who" data-i18n="hWho">이런 분들을 초청합니다</h2>
+    <div class="chips" data-i18n="chips">
+      <span class="chip">부산 지역 찬양팀</span>
+      <span class="chip">청소년부 · 청년부</span>
+      <span class="chip">선교 단체</span>
+      <span class="chip">일본 선교에 관심 있는 모든 분</span>
+    </div>
+    <p class="lead" style="margin-top:20px" data-i18n="whoNote">일본어를 몰라도 괜찮아요. 처음 듣는 가사여도 우리는 같은 하나님을 찬양합니다.</p>
+  </section>
+
+  <section id="songs" aria-labelledby="h-songs">
+    <div class="kicker" data-i18n="kSongs">함께 부를 찬양</div>
+    <h2 id="h-songs" data-i18n="hSongs">찬양 리스트와 악보, 곧 공유할게요</h2>
+    <p class="lead" data-i18n="songsLead">이날 한국어와 일본어로 함께 부를 찬양을 고르고 있어요. 찬양팀이 미리 연습할 수 있도록 준비되는 대로 이곳에 올려 드립니다.</p>
+    <div class="soon-grid">
+      <div class="soon"><span class="tag" data-i18n="prep">준비 중</span><b data-i18n="soon1">찬양 리스트</b><span data-i18n="soon1d">곡명과 한국어·일본어 가사</span></div>
+      <div class="soon"><span class="tag" data-i18n="prep2">준비 중</span><b data-i18n="soon2">악보</b><span data-i18n="soon2d">찬양팀을 위한 코드 악보</span></div>
+    </div>
+  </section>
+
+  <section id="apply" aria-labelledby="h-apply">
+    <div class="kicker" data-i18n="kApply">신청 방법</div>
+    <h2 id="h-apply" data-i18n="hApply">신청서 한 장이면 충분해요</h2>
+    <ol class="steps">
+      <li><b data-i18n="s1">아래 버튼으로 신청서를 여세요</b><span data-i18n="s1d">개인 신청도, 교회·팀 단위 신청도 한 신청서에서 받습니다.</span></li>
+      <li><b data-i18n="s2">2–3분이면 작성할 수 있어요</b><span data-i18n="s2d">단체 신청이라면 인원과 인솔자 연락처를 함께 적어 주세요.</span></li>
+      <li><b data-i18n="s3">11월 7일 오후 4시, 영주교회 본당으로</b><span class="js-deadline-step"></span></li>
+    </ol>
+    <p class="asks" data-i18n="asks">신청서에서 묻는 것 — <b>이름, 연락처, 소속 교회, 참가 구분(개인/단체), 연령대, 찬양팀 파트, 일본어 가능 정도</b>. 일본어 수준은 또래 교제 조를 나누는 데만 참고합니다.</p>
+    <div class="form-cta">
+      <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaForm">신청서 작성하기</a>
+      <span class="pending js-pending" hidden data-i18n="pending">신청서 링크는 곧 열립니다.</span>
+    </div>
+  </section>
+
+  <section id="pray" aria-labelledby="h-pray">
+    <div class="kicker" data-i18n="kPray">기도제목</div>
+    <h2 id="h-pray" data-i18n="hPray">무엇보다, 기도로 먼저 함께해 주세요</h2>
+    <ul class="prayers" data-i18n="prayers">
+      <li data-n="1">한일 다음 세대가 이 만남 속에서 하나님을 인격적으로 만나도록</li>
+      <li data-n="2">예배 안에서 하나 됨을 경험하도록</li>
+      <li data-n="3">부산의 찬양팀과 선교 단체에 일본 선교를 향한 새 마음이 부어지도록</li>
+      <li data-n="4">항공·숙소와 필요한 재정이 채워지고, 방문 기간의 모든 이동과 건강이 지켜지도록</li>
+      <li data-n="5">이 집회가 2027년 블레싱힐 페스티벌 준비의 첫 시작점이 되어, 한일 다음 세대를 위한 선교적 관계로 이어지도록</li>
+    </ul>
+    <div class="pray-room">
+      <p data-i18n="room"><b>카카오톡 기도방에서 함께 기도해요</b>더 세밀한 기도제목과 준비 소식을 나눕니다. 누구나 참여할 수 있어요.</p>
+      <a class="btn btn-kakao" href="https://invite.kakao.com/tc/EJG9YRqIeY" target="_blank" rel="noopener" data-i18n="roomBtn">기도방 참여하기</a>
+    </div>
+  </section>
+
+  <section id="give" aria-labelledby="h-give">
+    <div class="kicker" data-i18n="kGive">후원</div>
+    <h2 id="h-give" data-i18n="hGive">기도와 함께, 물질로도 동역해 주세요</h2>
+    <p class="lead" style="margin-bottom:24px" data-i18n="giveLead">아직 경제활동을 하지 않는 일본 청소년들이 부산에 와서 예배할 수 있도록, 여러분의 후원으로 두 나라 다음 세대를 잇는 다리를 놓아 주세요.</p>
+    <div class="budget" role="table" data-i18n-label="budgetLabel" aria-label="필요 예산">
+      <div role="row"><span role="cell" data-i18n="b1">항공·체류비 (방문단 15명)</span><span role="cell" data-i18n="b1v">600만 원</span></div>
+      <div role="row"><span role="cell" data-i18n="b2">현장 음향·시설 운영비</span><span role="cell" data-i18n="b2v">200만 원</span></div>
+      <div role="row"><span role="cell" data-i18n="b3">통역·홍보비</span><span role="cell" data-i18n="b3v">100만 원</span></div>
+      <div role="row" class="total"><span role="cell" data-i18n="bt">합계</span><span role="cell" data-i18n="btv">900만 원</span></div>
+    </div>
+    <div class="ways">
+      <div class="way">
+        <span class="lab" data-i18n="w1lab">온라인 후원</span>
+        <h3 data-i18n="w1h">미션펀드로 후원하기</h3>
+        <ul data-i18n="w1list">
+          <li>기부금 영수증 발급이 가능해요</li>
+          <li>후원금의 5%는 다른 나라 선교사님을 돕는 세계선교기금으로 쓰입니다</li>
+        </ul>
+        <a class="btn btn-gold" href="https://go.missionfund.org/BrighthopeBusan" target="_blank" rel="noopener" data-i18n="w1btn">미션펀드에서 후원하기 ↗</a>
+      </div>
+      <div class="way">
+        <span class="lab" data-i18n="w2lab">계좌 이체</span>
+        <span class="no" id="acct" data-i18n="acct">우리은행 1002-160-487259</span>
+        <small data-i18n="w2holder">예금주 이동하</small>
+        <button class="copy" id="copy" type="button" data-i18n="copy">계좌번호 복사</button>
+      </div>
+    </div>
+    <p class="note" data-i18n="giveNote">지난 6월 블레싱힐 페스티벌 후원금의 사용 내역을 모두 공개했고, 부족한 금액은 자비량으로 채웠습니다. 이번에도 집회 후 결산을 투명하게 보고드리겠습니다.</p>
+  </section>
+
+  <section id="next" aria-labelledby="h-next">
+    <div class="next">
+      <div class="next-img">
+        <img src="img/bhf2027.jpg" alt="Blessing Hill Festival '27 in Fukuoka Tenjin" loading="lazy">
+        <span class="soon-badge">COMING SOON</span>
+      </div>
+      <div>
+        <div class="kicker">NEXT · 2027</div>
+        <h2 id="h-next" data-i18n="hNext">다음 이야기는<br>후쿠오카 텐진에서</h2>
+        <p class="lead" data-i18n="nextLead">부산에서 시작되는 이 만남은 2027년, 후쿠오카 텐진의 블레싱힐 페스티벌로 이어집니다. 자세한 소식은 곧 전해 드릴게요.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Bright Hope Worship IN Busan</b> · <span data-i18n="eyebrow2">한일 연합 일본어 찬양집회</span><br>
+    <span data-i18n="footHost">주최 일본선교연구소 · 에클레시아 · 워십네이션스 · 브라이트호프</span>
+    <span class="js-contact"></span>
+  </div>
+</footer>
+
+<div class="bar" role="region" data-i18n-label="barLabel" aria-label="참가 신청">
+  <div class="bar-in">
+    <div class="t"><b data-i18n="barT">11.7(토) 16:00 · 부산 영주교회</b><span class="js-dday-bar"></span></div>
+    <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaBar">참가 신청</a>
+  </div>
+</div>
+
+<script>
+/* ── 여기만 고치면 됩니다 ───────────────────────────── */
+const CONFIG = {
+  formUrl: "",                 // 구글폼 링크 (예: "https://forms.gle/xxxx")
+  deadline: "2026-11-04",      // 신청 마감일 (YYYY-MM-DD)
+  contact: ""                  // 문의처 (예: "카카오톡 채널 @worshipnations")
+};
+/* ──────────────────────────────────────────────────── */
+
+const JA = {
+  heroAlt: "教会の中で笑顔でピースをする日韓の中高生・青年8人のイラスト",
+  eyebrow: "日韓合同 日本語賛美集会",
+  eyebrow2: "日韓合同 日本語賛美集会",
+  h1: "日本の中高生・青年たちが<br>神さまを賛美するために<br>釜山へやって来ます。",
+  when: "<b>2026年11月7日（土）16:00–18:30</b><br>釜山ヨンジュ教会 本堂 · 参加無料 · 事前申込制",
+  ctaHero: "参加を申し込む",
+  kInfo: "集会のご案内",
+  hInfo: "11月7日、ヨンジュ教会でお会いしましょう",
+  dtWhen: "日時", ddWhen: "2026年11月7日（土）16:00–18:30",
+  dtWhere: "場所", ddWhere: "釜山ヨンジュ（瀛州）教会 本堂",
+  map: "NAVERマップで見る ↗",
+  dtPark: "駐車場", ddPark: "ポンネ（蓬莱）小学校の駐車場<small>週末は無料 · 教会まで徒歩2〜3分</small>",
+  dtJoin: "参加", ddJoin: "事前申込制 · 参加無料",
+  dtTeam: "訪問団", ddTeam: "福岡の奉仕者と中高生賛美チーム 約15名",
+  dtHost: "主催", host: "日本宣教研究所 · エクレシア · ワーシップネーションズ · ブライトホープ",
+  kWhy: "なぜこの集会なのか",
+  hWhy: "飛行機でわずか1時間、<br>なのにまったく違う風景",
+  why1: "日本はクリスチャンが人口の<span class=\"hl\">0.4%</span>にも満たない国です。街には神社やお寺がたくさんあっても十字架を見かけることは少なく、高齢化が進む教会では同世代の友だちに出会うことさえ簡単ではありません。",
+  why2: "今回釜山を訪れるブライトホープとワーシップネーションズの中高生・青年たちは、その中でも「賛美で神さまを礼拝したい」という召しを受けた若者たちです。",
+  st1: "日本のクリスチャン人口の割合", st2: "釜山–福岡の直線距離", st3: "韓国の10代のプロテスタント信者の割合",
+  why3: "11月7日、彼らと一緒に手を上げて賛美し、祈ってください。韓国の教会の熱い賛美にふれるこの数日間が、福岡と日本で長く燃え続ける火種になるかもしれません。そしてこの出会いは、<span class=\"hl\">2027年ブレッシングヒル・フェスティバル</span>へ向けた最初の一歩でもあります。",
+  planeAlt: "夕焼けの空の下、飛行機の窓から見える釜山の海岸のイラスト",
+  kWho: "ご招待", hWho: "こんな方をお招きします",
+  chips: '<span class="chip">釜山の賛美チーム</span><span class="chip">中高生部・青年部</span><span class="chip">宣教団体</span><span class="chip">日本宣教に関心のあるすべての方</span>',
+  whoNote: "日本語がわからなくても大丈夫。はじめて聞く歌詞でも、私たちは同じ神さまを賛美します。",
+  kSongs: "一緒に歌う賛美",
+  hSongs: "賛美リストと楽譜、まもなく公開します",
+  songsLead: "当日、韓国語と日本語で一緒に歌う賛美を選んでいます。賛美チームの皆さんが事前に練習できるよう、準備ができしだいここでお知らせします。",
+  prep: "準備中", prep2: "準備中",
+  soon1: "賛美リスト", soon1d: "曲名と韓国語・日本語の歌詞",
+  soon2: "楽譜", soon2d: "賛美チーム向けのコード譜",
+  kApply: "お申し込み方法", hApply: "申込書1枚でOKです",
+  s1: "下のボタンから申込書を開いてください", s1d: "個人でも、教会・チーム単位でも、同じ申込書で受け付けています。",
+  s2: "2〜3分で記入できます", s2d: "団体でお申し込みの場合は、人数と引率者の連絡先もご記入ください。",
+  s3: "11月7日午後4時、ヨンジュ教会 本堂へ",
+  asks: "申込書でお聞きすること — <b>お名前、連絡先、所属教会、参加区分（個人／団体）、年代、賛美チームでのパート、日本語のレベル</b>。日本語のレベルは、同世代交流のグループ分けの参考にのみ使います。（申込書は韓国語です）",
+  ctaForm: "申込書に記入する",
+  pending: "申込書のリンクはまもなく公開されます。",
+  kPray: "祈りの課題", hPray: "何よりもまず、祈りで共に歩んでください",
+  prayers: '<li data-n="1">日韓の次世代が、この出会いの中で神さまと人格的に出会えるように</li><li data-n="2">礼拝の中で一つになる恵みを体験できるように</li><li data-n="3">釜山の賛美チームと宣教団体に、日本宣教への新しい思いが注がれるように</li><li data-n="4">航空券・宿泊と必要な資金が満たされ、滞在中のすべての移動と健康が守られるように</li><li data-n="5">この集会が2027年ブレッシングヒル・フェスティバルの準備の始まりとなり、日韓の次世代をつなぐ宣教の関係へと広がっていくように</li>',
+  room: "<b>カカオトークの祈りのグループで一緒に祈りましょう</b>より詳しい祈りの課題と準備の様子をシェアしています。どなたでも参加できます（カカオトークのアプリが必要です）。",
+  roomBtn: "祈りのグループに参加する",
+  kGive: "ご支援", hGive: "祈りとともに、献金でも共に歩んでください",
+  giveLead: "まだ収入のない日本の中高生たちが釜山に来て礼拝できるよう、皆さまのご支援で両国の次世代をつなぐ架け橋を架けてください。",
+  budgetLabel: "必要な予算",
+  b1: "航空・滞在費（訪問団15名）", b1v: "600万ウォン",
+  b2: "当日の音響・施設運営費", b2v: "200万ウォン",
+  b3: "通訳・広報費", b3v: "100万ウォン",
+  bt: "合計", btv: "900万ウォン",
+  w1lab: "オンライン献金", w1h: "ミッションファンドで支援する",
+  w1list: "<li>韓国の寄付金領収書を発行できます</li><li>献金の5%は、他の国で働く宣教師を支える世界宣教基金に用いられます</li>",
+  w1btn: "ミッションファンドで支援する ↗",
+  w2lab: "口座振込（韓国の銀行）", acct: "ウリ銀行 1002-160-487259", w2holder: "口座名義 イ・ドンハ（이동하）",
+  copy: "口座番号をコピー",
+  giveNote: "6月のブレッシングヒル・フェスティバルでは献金の使いみちをすべて公開し、不足分は自費でまかないました。今回も集会後に決算を誠実にご報告します。",
+  hNext: "次の物語は<br>福岡・天神で",
+  nextLead: "釜山で始まるこの出会いは、2027年、福岡・天神のブレッシングヒル・フェスティバルへと続きます。詳しくはまもなくお知らせします。",
+  footHost: "主催 日本宣教研究所 · エクレシア · ワーシップネーションズ · ブライトホープ",
+  barLabel: "参加申し込み",
+  barT: "11/7（土）16:00 · 釜山ヨンジュ教会",
+  ctaBar: "申し込む"
+};
+
+(function(){
+  const KO = {};
+  document.querySelectorAll("[data-i18n]").forEach(el => KO[el.dataset.i18n] = el.innerHTML);
+  document.querySelectorAll("[data-i18n-alt]").forEach(el => KO[el.dataset.i18nAlt] = el.alt);
+  document.querySelectorAll("[data-i18n-label]").forEach(el => KO[el.dataset.i18nLabel] = el.getAttribute("aria-label"));
+
+  const dl = new Date(CONFIG.deadline + "T23:59:59+09:00");
+  const mo = dl.getMonth() + 1, dd = dl.getDate();
+  const wd = new Date(CONFIG.deadline + "T12:00:00+09:00").getDay();
+  const days = Math.ceil((dl - new Date()) / 86400000);
+  const closed = days < 0;
+  const hasForm = /^https:\/\//.test(CONFIG.formUrl);
+  const contact = CONFIG.contact.replace(/[<>&]/g, "");
+
+  const T = {
+    ko: {
+      label: `${mo}월 ${dd}일(${"일월화수목금토"[wd]}) 신청 마감`,
+      dday: closed ? "신청이 마감되었습니다" : days === 0 ? "오늘 마감" : `신청 마감까지 D-${days}`,
+      joinSmall: l => `${l} · 교회·팀 단위 신청 가능`,
+      step: l => `${l}. 당일 봉래초등학교 주차장(주말 무료)을 이용하세요.`,
+      closedBtn: "신청 마감", contact: "문의 ", copied: "복사됨", selected: "선택됨 · 길게 눌러 복사",
+      copyText: "우리은행 1002-160-487259 이동하"
+    },
+    ja: {
+      label: `${mo}月${dd}日（${"日月火水木金土"[wd]}）申込締切`,
+      dday: closed ? "受付は終了しました" : days === 0 ? "本日締切" : `締切まであと${days}日`,
+      joinSmall: l => `${l} · 教会・チーム単位での申し込みも可能`,
+      step: l => `${l}。当日はポンネ小学校の駐車場（週末無料）をご利用ください。`,
+      closedBtn: "受付終了", contact: "お問い合わせ ", copied: "コピーしました", selected: "選択しました · 長押しでコピー",
+      copyText: "ウリ銀行 1002-160-487259 이동하"
+    }
+  };
+  let lang = "ko";
+
+  const setAll = (sel, html) => document.querySelectorAll(sel).forEach(el => el.innerHTML = html);
+
+  function render(){
+    const dict = lang === "ja" ? JA : KO, t = T[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
+    document.querySelectorAll("[data-i18n-alt]").forEach(el => { const v = dict[el.dataset.i18nAlt]; if (v != null) el.alt = v; });
+    document.querySelectorAll("[data-i18n-label]").forEach(el => { const v = dict[el.dataset.i18nLabel]; if (v != null) el.setAttribute("aria-label", v); });
+    document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+
+    setAll(".js-deadline-text", t.joinSmall(t.label));
+    setAll(".js-deadline-step", t.step(t.label));
+    setAll(".js-dday", closed ? t.dday : `<b>${t.dday}</b> · ${t.label}`);
+    setAll(".js-dday-bar", t.dday);
+    setAll(".js-contact", contact ? `<br>${t.contact}${contact}` : "");
+
+    document.querySelectorAll(".js-form").forEach(a => {
+      if (closed) { a.textContent = t.closedBtn; a.setAttribute("aria-disabled", "true"); a.removeAttribute("href"); return; }
+      if (hasForm) { a.href = CONFIG.formUrl; a.target = "_blank"; a.rel = "noopener"; }
+    });
+    const pend = document.querySelector(".js-pending");
+    if (pend) pend.hidden = hasForm || closed;
+  }
+
+  function setLang(l){
+    lang = l === "ja" ? "ja" : "ko";
+    try { localStorage.setItem("bhw-lang", lang); } catch (e) {}
+    render();
+  }
+
+  document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+
+  let start = "ko";
+  try { start = localStorage.getItem("bhw-lang") || start; } catch (e) {}
+  if (location.hash === "#ja") start = "ja";
+  if (location.hash === "#ko") start = "ko";
+  lang = start;
+  render();
+
+  const btn = document.getElementById("copy");
+  btn.addEventListener("click", () => {
+    const t = T[lang];
+    const reset = () => { btn.innerHTML = (lang === "ja" ? JA : KO).copy; btn.dataset.done = ""; };
+    const done = () => { btn.textContent = t.copied; btn.dataset.done = "1"; setTimeout(reset, 2000); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("acct")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = t.selected; setTimeout(reset, 3000); };
+    try { navigator.clipboard.writeText(t.copyText).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
