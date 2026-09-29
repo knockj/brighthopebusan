@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta property="og:title" content="Bright Hope Worship IN Busan">
 <meta property="og:description" content="2026.11.7(토) 16:00 부산 영주교회 · 한일 연합 일본어 찬양집회 안내와 참가 신청">
-<meta property="og:image" content="img/hero-wide.jpg">
+<meta property="og:image" content="https://knockj.github.io/img/hero-jesus-wide.jpg">
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Bright Hope Worship IN Busan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -99,6 +99,50 @@ h2{font-size:clamp(26px,5vw,36px);line-height:1.32;margin-bottom:22px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
 .chip{padding:10px 16px;border-radius:999px;background:var(--surface);font-weight:500;font-size:16px}
 
+/* focus */
+.focus{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+.focus div{background:var(--surface);border-radius:14px;padding:20px 18px;display:flex;flex-direction:column;gap:6px}
+.focus em{font-style:normal;font:var(--display-w) 26px/1.1 var(--display);color:var(--gold)}
+.focus b{font-size:16px}
+.focus span{font-size:14px;color:var(--muted)}
+
+/* people */
+.people{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px}
+.person{background:var(--surface);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.person .ph{aspect-ratio:4/3;max-width:100%;background:var(--surface-2)}
+.person .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.person .bd{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px}
+.person h3{font-size:22px;line-height:1.3}
+.person .role{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--gold-ink);background:var(--gold);border-radius:999px;padding:3px 10px}
+.person p{font-size:15px;color:var(--muted)}
+.orgs{margin-top:34px}
+.orgs-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px;margin-bottom:10px}
+.orgs-h b{font-size:17px}
+.orgs-h span{font-size:13px;color:var(--faint)}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 2px;font-weight:700;font-size:16px}
+summary::-webkit-details-marker{display:none}
+summary small{display:block;font-weight:400;font-size:13px;color:var(--faint);margin-top:2px}
+summary::after{content:"+";flex-shrink:0;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);font-size:18px;line-height:1}
+details[open] summary::after{content:"−"}
+summary:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:8px}
+details .org-body{padding:0 2px 18px;font-size:15px;color:var(--muted);display:grid;gap:8px}
+.focus-line{font-size:19px;color:var(--text);line-height:1.75}
+.hero .tagline{font-size:17px;color:var(--text);margin:-4px 0 14px;max-width:34em}
+
+/* per-person giving */
+.per-person{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;background:var(--surface);border-radius:16px;padding:22px 22px;margin-bottom:14px}
+.pp-num{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
+.pp-num span{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--gold)}
+.pp-num b{font:var(--display-w) clamp(30px,6vw,40px)/1.1 var(--display);color:var(--text);font-variant-numeric:tabular-nums}
+.per-person p{flex:1 1 260px;font-size:15px;color:var(--muted)}
+.goal{font-size:15px;color:var(--muted);margin:0 0 6px}
+.goal b{color:var(--gold)}
+details.budget-more{margin-bottom:22px;border:0}
+.budget-more summary{font-size:14px;font-weight:700;color:var(--sky);padding:10px 0;justify-content:flex-start;gap:8px}
+.budget-more summary::after{width:22px;height:22px;font-size:15px}
+.budget-more .budget{margin:4px 0 0}
 /* songs */
 .soon-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
 .soon{border:1px dashed rgba(158,216,245,.45);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:6px}
@@ -165,7 +209,10 @@ footer b{color:var(--muted);font-weight:500}
   .hero picture{position:relative;display:block}
   .hero img{position:relative;height:auto;aspect-ratio:9/8;object-position:center top}
   .hero-in{margin-top:-96px}
-  .soon-grid,.ways{grid-template-columns:1fr}
+  .hero::after{display:none}
+  .hero picture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,27,16,.45) 0%,rgba(42,27,16,0) 16%,rgba(42,27,16,0) 54%,rgba(42,27,16,.62) 72%,rgba(42,27,16,.9) 86%,var(--bg) 100%)}
+  .hero .eyebrow,.hero h1{text-shadow:0 1px 10px rgba(20,12,6,.7)}
+  .soon-grid,.ways,.focus,.people{grid-template-columns:1fr}
   .next{grid-template-columns:1fr}
   .next-img{max-width:340px}
 }
@@ -190,6 +237,17 @@ footer b{color:var(--muted);font-weight:500}
   .hero img{animation:drift 18s ease-out both}
   @keyframes drift{from{transform:scale(1.06)}to{transform:scale(1)}}
 }
+
+/* hero v3: 넓은 예수님 그림 — PC는 전면 배경 + 왼쪽 글씨, 모바일은 인물 쪽만 */
+@media (max-width:719px){
+  .hero img{aspect-ratio:900/871;object-position:center}
+}
+@media (min-width:720px){
+  .hero img{object-position:right center}
+  .hero::after{background:linear-gradient(90deg,rgba(42,27,16,.9) 0%,rgba(42,27,16,.76) 26%,rgba(42,27,16,.25) 40%,rgba(42,27,16,0) 50%),linear-gradient(180deg,rgba(42,27,16,.45) 0%,rgba(42,27,16,0) 18%,rgba(42,27,16,0) 82%,var(--bg) 100%)}
+  .hero-in > *{max-width:500px}
+  .hero h1{font-size:clamp(34px,3.4vw,50px)}
+}
 </style>
 </head>
 <body>
@@ -197,8 +255,8 @@ footer b{color:var(--muted);font-weight:500}
 
 <header class="hero">
   <picture>
-    <source media="(min-width:720px)" srcset="img/hero-wide.jpg">
-    <img src="img/hero-tall.jpg" data-i18n-alt="heroAlt" alt="교회 안에서 환하게 웃으며 손가락으로 브이를 그린 한일 청소년·청년 여덟 명의 일러스트">
+    <source media="(min-width:720px)" srcset="img/hero-jesus-wide.jpg">
+    <img src="img/hero-jesus-tall.jpg" data-i18n-alt="heroAlt" alt="heroAlt">
   </picture>
   <div class="handle">BRIGHT HOPE WORSHIP IN BUSAN</div>
   <div class="lang" role="group" aria-label="언어 / 言語">
@@ -208,6 +266,7 @@ footer b{color:var(--muted);font-weight:500}
   <div class="hero-in wrap">
     <div class="eyebrow" data-i18n="eyebrow">한일 연합 일본어 찬양집회</div>
     <h1 data-i18n="h1">일본의 청소년·청년들이<br>하나님을 찬양하기 위해<br>부산에 옵니다.</h1>
+    <p class="tagline" data-i18n="tagline">한국과 일본의 다음 세대가 함께 드리는 기쁨의 예배</p>
     <p class="when" data-i18n="when"><b>2026년 11월 7일(토) 오후 4시–6시 30분</b><br>부산 영주교회 본당 · 참가비 무료 · 사전 신청제</p>
     <div class="cta-row">
       <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaHero">참가 신청하기</a>
@@ -223,12 +282,18 @@ footer b{color:var(--muted);font-weight:500}
     <h2 id="h-info" data-i18n="hInfo">11월 7일, 영주교회에서 만나요</h2>
     <dl class="info">
       <dt data-i18n="dtWhen">일시</dt><dd data-i18n="ddWhen">2026년 11월 7일(토) 16:00–18:30</dd>
-      <dt data-i18n="dtWhere">장소</dt><dd><span data-i18n="ddWhere">부산 영주교회 본당</span><small>부산광역시 중구 대영로 226번안길 6</small><a href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%20%EC%98%81%EC%A3%BC%EA%B5%90%ED%9A%8C" target="_blank" rel="noopener" data-i18n="map">네이버 지도에서 보기 ↗</a></dd>
+      <dt data-i18n="dtWhere">장소</dt><dd><span data-i18n="ddWhere">부산 영주교회 본당</span><small>부산 중구 대영로226번안길 6</small><a href="https://naver.me/FXnGOx2v" target="_blank" rel="noopener" data-i18n="map">네이버 지도에서 보기 ↗</a></dd>
       <dt data-i18n="dtPark">주차</dt><dd data-i18n="ddPark">봉래초등학교 주차장<small>주말 무료 · 교회까지 걸어서 2–3분</small></dd>
       <dt data-i18n="dtJoin">참가</dt><dd><span data-i18n="ddJoin">사전 신청제 · 참가비 무료</span><small class="js-deadline-text"></small></dd>
-      <dt data-i18n="dtTeam">방문단</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 15명 내외</dd>
-      <dt data-i18n="dtHost">주최</dt><dd data-i18n="host">일본선교연구소 · 에클레시아 · 워십네이션스 · 브라이트호프</dd>
+      <dt data-i18n="dtTeam">방문팀</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 15명 내외<small>4박 5일 동안 부산에 머뭅니다</small></dd>
+      <dt data-i18n="dtHost">주최</dt><dd data-i18n="host">일본선교연구소 · 에클레시아 · 블레싱힐 미니스트리 · 브라이트호프 · 워십네이션스</dd>
     </dl>
+  </section>
+
+  <section id="focus" aria-labelledby="h-focus">
+    <div class="kicker" data-i18n="kFocus">이 집회의 중심</div>
+    <h2 id="h-focus" data-i18n="hFocus">함께 예배하는 기쁨으로 초대합니다</h2>
+    <p class="lead focus-line" data-i18n="focusLine">살아계신 주 예수 그리스도께 <span class="hl">영광</span>을 돌리고, 성령의 <span class="hl">능력</span>을 구하며, 한 사람 한 사람이 인격적인 하나님을 <span class="hl">만나는</span> 기쁨의 예배를 기대합니다. 그리고 일본과 그 땅에서 살아가는 영혼들, 일본의 교회와 예배를 위해 함께 마음을 모아 기도하길 원합니다.</p>
   </section>
 
   <section id="why" aria-labelledby="h-why">
@@ -241,8 +306,42 @@ footer b{color:var(--muted);font-weight:500}
       <div class="stat"><b>214km</b><span data-i18n="st2">부산–후쿠오카 직선거리</span></div>
       <div class="stat"><b>12%</b><span data-i18n="st3">한국 청소년 중 개신교인</span></div>
     </div>
-    <p class="lead" data-i18n="why3">11월 7일, 이들과 함께 손을 들고 찬양하며 기도해 주세요. 한국 교회의 뜨거운 찬양을 경험하는 이 며칠이 후쿠오카와 일본에서 오래도록 이어질 불씨가 될 수 있습니다. 이번 만남은 <span class="hl">2027년 블레싱힐 페스티벌</span>을 향한 첫걸음이기도 합니다.</p>
+    <p class="lead" data-i18n="why3">11월 7일, 이들과 함께 손을 들고 살아계신 주님을 찬양해 주세요. 두 나라의 다음 세대가 예수 그리스도의 이름 앞에 함께 서는 이 시간이, 후쿠오카와 일본에서 오래도록 이어질 믿음의 불씨가 되기를 기도합니다. 이번 만남은 <span class="hl">2027년 블레싱힐 페스티벌</span>을 향한 첫걸음이기도 합니다.</p>
     <div class="figure"><img src="img/plane.jpg" data-i18n-alt="planeAlt" alt="노을 진 하늘 아래 비행기 창밖으로 보이는 부산 해안 일러스트" loading="lazy"></div>
+  </section>
+
+  <section id="people" aria-labelledby="h-people">
+    <div class="kicker" data-i18n="kPeople">찬양과 간증</div>
+    <h2 id="h-people" data-i18n="hPeople">찬양과 간증으로 예수님을 예배합니다</h2>
+    <div class="people">
+      <article class="person">
+        <div class="ph"><img src="img/brighthope.jpg" data-i18n-alt="bhAlt" alt="십자가가 걸린 예배당 무대에서 베이스, 드럼, 기타, 피아노로 함께 찬양하는 브라이트호프 네 명의 일러스트" loading="lazy" style="object-position:center 40%"></div>
+        <div class="bd"><span class="role" data-i18n="roleSong2">찬양과 간증</span><h3>Bright Hope</h3><p data-i18n="bhD">후쿠오카 미즈타니의 후쿠오카그리스도교회에서 함께 예배드리는 청소년 찬양팀입니다. 크리스마스 특송을 계기로 활동을 시작해, 찬양 사역의 꿈을 품고 예수님을 노래하고 있습니다.</p></div>
+      </article>
+      <article class="person">
+        <div class="ph"><img src="img/park2.jpg" data-i18n-alt="parkAlt" alt="무대에서 가슴에 손을 얹고 찬양하는 박문춘 전도사" loading="lazy" style="object-position:center 25%"></div>
+        <div class="bd"><span class="role" data-i18n="roleSong">찬양과 간증</span><h3 data-i18n="parkN">박문춘 전도사</h3><p data-i18n="parkD">동경사랑의교회를 섬기는 찬양사역자입니다. 도쿄기독교대학(TCU)에서 신학을 공부하며, 찬양으로 예수 그리스도를 전하고 있습니다. 찬양과 간증으로 함께합니다.</p></div>
+      </article>
+    </div>
+    <div class="orgs">
+      <div class="orgs-h"><b data-i18n="orgsT">주최·협력 단체 소개</b><span data-i18n="orgsHint">이름을 누르면 소개가 펼쳐져요</span></div>
+      <details>
+        <summary><span><span data-i18n="o_jmi_n">일본선교연구소</span><small>Japan Mission Institute (JMI)</small></span></summary>
+        <div class="org-body"><p data-i18n="o_jmi_1">일본 상황에 맞는 선교 정책과 목회 전략을 연구하고, 팀 목회 등 구체적인 선교 프로그램을 개발하기 위해 세워진 초교파 선교 연구 기관입니다. 2015년 7월에 문을 열었고, 김대호 목사 등이 소장·대표로 섬기고 있습니다.</p><p data-i18n="o_jmi_2">한국과 일본의 청소년·청년이 함께 모여 일본 복음화를 위해 교제하고 현지 교회를 섬기는 연합 캠프를 정기적으로 열며, 일본 선교의 특수성을 고려한 목회 전략 연구와 단기선교, 현지 교회 협력 사역을 이어 가고 있습니다.</p></div>
+      </details>
+      <details>
+        <summary><span><span data-i18n="o_ecc_n">에클레시아 미니스트리</span><small>Ecclesia Ministry</small></span></summary>
+        <div class="org-body"><p data-i18n="o_ecc_1">갈라디아서 6장 14절 말씀을 약속의 말씀으로 붙잡고, 모든 예배와 사역 가운데 오직 예수님만 자랑하며 예수님의 흔적을 남기길 소망하는 공동체입니다.</p><p data-i18n="o_ecc_2">매주 월요일 저녁 7시 30분 공동체 예배를 통해, 하나님의 말씀에 기초한 올바른 신앙 고백 위에 공동체를 세워 가고 있습니다.</p></div>
+      </details>
+      <details>
+        <summary><span><span data-i18n="o_bhm_n">블레싱힐 미니스트리</span><small>Blessing Hill Ministry</small></span></summary>
+        <div class="org-body"><p data-i18n="o_bhm_1">음향으로 복음을 섬기는 사역입니다. 오래된 음향 장비로 어려움을 겪는 일본 교회를 찾아가 점검부터 교체·설치까지 돕고, 자체 음향 장비로 선교팀과 집회를 지원합니다.</p><p data-i18n="o_bhm_2">교회와 단체를 잇는 선교의 다리로서 워십네이션스·브라이트호프와 연합해 사역하며, 블레싱힐 페스티벌의 이름도 이 사역에서 시작되었습니다. 이진우 선교사가 대표로 섬기고 있습니다.</p></div>
+      </details>
+      <details>
+        <summary><span><span data-i18n="o_wn_n">워십네이션스</span><small>Worship Nations</small></span></summary>
+        <div class="org-body"><p data-i18n="o_wn_1">후쿠오카 지역 교회들이 함께 예배하도록 돕는 지역 교회 연합 찬양 사역팀입니다. 2022년 연합 찬양집회로 시작해 2025년부터 2기 사역을 이어 가고 있습니다.</p><p data-i18n="o_wn_2">2026년 6월에는 블레싱힐 미니스트리, 브라이트호프와 협력해 후쿠오카 텐진 광장에서 한일 18개 팀이 함께한 블레싱힐 페스티벌을 주최했고, '10년은 후쿠오카, 10년은 일본 전국, 10년은 세계 선교'라는 30년 비전을 품고 있습니다.</p></div>
+      </details>
+    </div>
   </section>
 
   <section id="who" aria-labelledby="h-who">
@@ -272,10 +371,10 @@ footer b{color:var(--muted);font-weight:500}
     <h2 id="h-apply" data-i18n="hApply">신청서 한 장이면 충분해요</h2>
     <ol class="steps">
       <li><b data-i18n="s1">아래 버튼으로 신청서를 여세요</b><span data-i18n="s1d">개인 신청도, 교회·팀 단위 신청도 한 신청서에서 받습니다.</span></li>
-      <li><b data-i18n="s2">2–3분이면 작성할 수 있어요</b><span data-i18n="s2d">단체 신청이라면 인원과 인솔자 연락처를 함께 적어 주세요.</span></li>
+      <li><b data-i18n="s2">1–2분이면 작성할 수 있어요</b><span data-i18n="s2d">단체라면 대표자 한 분이 전체 인원만 적어 주세요.</span></li>
       <li><b data-i18n="s3">11월 7일 오후 4시, 영주교회 본당으로</b><span class="js-deadline-step"></span></li>
     </ol>
-    <p class="asks" data-i18n="asks">신청서에서 묻는 것 — <b>이름, 연락처, 소속 교회, 참가 구분(개인/단체), 연령대, 찬양팀 파트, 일본어 가능 정도</b>. 일본어 수준은 또래 교제 조를 나누는 데만 참고합니다.</p>
+    <p class="asks" data-i18n="asks">신청서에서 묻는 것 — <b>이름, 연락처, 소속 교회, 연령대, 함께 오는 인원</b>. 일본어 수준과 찬양 파트는 선택으로, 일본 친구들과 만나는 시간에 조를 나눌 때만 참고합니다.</p>
     <div class="form-cta">
       <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaForm">신청서 작성하기</a>
       <span class="pending js-pending" hidden data-i18n="pending">신청서 링크는 곧 열립니다.</span>
@@ -286,11 +385,12 @@ footer b{color:var(--muted);font-weight:500}
     <div class="kicker" data-i18n="kPray">기도제목</div>
     <h2 id="h-pray" data-i18n="hPray">무엇보다, 기도로 먼저 함께해 주세요</h2>
     <ul class="prayers" data-i18n="prayers">
-      <li data-n="1">한일 다음 세대가 이 만남 속에서 하나님을 인격적으로 만나도록</li>
-      <li data-n="2">예배 안에서 하나 됨을 경험하도록</li>
-      <li data-n="3">부산의 찬양팀과 선교 단체에 일본 선교를 향한 새 마음이 부어지도록</li>
-      <li data-n="4">항공·숙소와 필요한 재정이 채워지고, 방문 기간의 모든 이동과 건강이 지켜지도록</li>
-      <li data-n="5">이 집회가 2027년 블레싱힐 페스티벌 준비의 첫 시작점이 되어, 한일 다음 세대를 위한 선교적 관계로 이어지도록</li>
+      <li data-n="1">살아계신 주 예수 그리스도께서 이 예배의 주인이 되시고, 모든 영광을 받으시도록</li>
+      <li data-n="2">참석하는 한 사람 한 사람이 인격적인 하나님을 만나고, 예수 그리스도를 나의 주로 고백하도록</li>
+      <li data-n="3">성령의 능력이 임하여, 한일 다음 세대가 언어와 국경을 넘어 예수 안에서 하나 되도록</li>
+      <li data-n="4">찬양과 간증으로 섬기는 모든 사역자가 오직 예수님만 자랑하도록</li>
+      <li data-n="5">일본과 그 땅에서 살아가는 영혼들에게 복음의 길이 열리고, 일본의 교회와 예배가 새롭게 일어나도록</li>
+      <li data-n="6">방문팀의 항공·숙소와 필요한 재정이 채워지고, 모든 이동과 건강이 지켜지도록</li>
     </ul>
     <div class="pray-room">
       <p data-i18n="room"><b>카카오톡 기도방에서 함께 기도해요</b>더 세밀한 기도제목과 준비 소식을 나눕니다. 누구나 참여할 수 있어요.</p>
@@ -302,12 +402,20 @@ footer b{color:var(--muted);font-weight:500}
     <div class="kicker" data-i18n="kGive">후원</div>
     <h2 id="h-give" data-i18n="hGive">기도와 함께, 물질로도 동역해 주세요</h2>
     <p class="lead" style="margin-bottom:24px" data-i18n="giveLead">아직 경제활동을 하지 않는 일본 청소년들이 부산에 와서 예배할 수 있도록, 여러분의 후원으로 두 나라 다음 세대를 잇는 다리를 놓아 주세요.</p>
-    <div class="budget" role="table" data-i18n-label="budgetLabel" aria-label="필요 예산">
-      <div role="row"><span role="cell" data-i18n="b1">항공·체류비 (방문단 15명)</span><span role="cell" data-i18n="b1v">600만 원</span></div>
-      <div role="row"><span role="cell" data-i18n="b2">현장 음향·시설 운영비</span><span role="cell" data-i18n="b2v">200만 원</span></div>
-      <div role="row"><span role="cell" data-i18n="b3">통역·홍보비</span><span role="cell" data-i18n="b3v">100만 원</span></div>
-      <div role="row" class="total"><span role="cell" data-i18n="bt">합계</span><span role="cell" data-i18n="btv">900만 원</span></div>
+    <div class="per-person">
+      <div class="pp-num"><span data-i18n="ppLab">한 사람의 방문</span><b data-i18n="ppVal">약 40만 원</b></div>
+      <p data-i18n="ppText">일본 청소년 한 명이 부산에 와서 4박 5일 동안 함께 예배하는 데 드는 항공·체류비예요. 한 사람의 발걸음을 함께 책임져 주세요.</p>
     </div>
+    <p class="goal" data-i18n="goal">전체 필요 예산 <b>900만 원</b> · 작은 금액도 귀한 동역입니다</p>
+    <details class="budget-more">
+      <summary data-i18n="budgetMore">예산 자세히 보기</summary>
+      <div class="budget" role="table" data-i18n-label="budgetLabel" aria-label="필요 예산">
+        <div role="row"><span role="cell" data-i18n="b1">항공·체류비 (방문팀 15명, 4박 5일)</span><span role="cell" data-i18n="b1v">600만 원</span></div>
+        <div role="row"><span role="cell" data-i18n="b2">현장 음향·시설 운영비</span><span role="cell" data-i18n="b2v">200만 원</span></div>
+        <div role="row"><span role="cell" data-i18n="b3">통역·홍보비</span><span role="cell" data-i18n="b3v">100만 원</span></div>
+        <div role="row" class="total"><span role="cell" data-i18n="bt">합계</span><span role="cell" data-i18n="btv">900만 원</span></div>
+      </div>
+    </details>
     <div class="ways">
       <div class="way">
         <span class="lab" data-i18n="w1lab">온라인 후원</span>
@@ -347,7 +455,7 @@ footer b{color:var(--muted);font-weight:500}
 <footer>
   <div class="wrap">
     <b>Bright Hope Worship IN Busan</b> · <span data-i18n="eyebrow2">한일 연합 일본어 찬양집회</span><br>
-    <span data-i18n="footHost">주최 일본선교연구소 · 에클레시아 · 워십네이션스 · 브라이트호프</span>
+    <span data-i18n="footHost">주최 일본선교연구소 · 에클레시아 · 블레싱힐 미니스트리 · 브라이트호프 · 워십네이션스</span>
     <span class="js-contact"></span>
   </div>
 </footer>
@@ -369,7 +477,30 @@ const CONFIG = {
 /* ──────────────────────────────────────────────────── */
 
 const JA = {
-  heroAlt: "教会の中で笑顔でピースをする日韓の中高生・青年8人のイラスト",
+  tagline: "日韓の次世代が共にささげる、喜びの礼拝",
+  kFocus: "この集会の中心", hFocus: "共に礼拝する喜びへ、お招きします",
+  focusLine: "生きておられる主イエス・キリストに<span class=\"hl\">栄光</span>をお返しし、聖霊の<span class=\"hl\">力</span>を求め、一人ひとりが人格的な神さまと<span class=\"hl\">出会う</span>喜びの礼拝を期待しています。そして、日本とそこに生きる一人ひとりのたましい、日本の教会と礼拝のために、心を合わせて共に祈りたいと願っています。",
+  kPeople: "賛美と証し", hPeople: "賛美と証しでイエスさまを礼拝します",
+  parkAlt: "ステージで胸に手を当てて賛美するパク・ムンチュン伝道師",
+  bhAlt: "十字架のある礼拝堂のステージで、ベース・ドラム・ギター・ピアノで共に賛美するブライトホープ4人のイラスト",
+  roleSong: "賛美と証し", roleSong2: "賛美と証し",
+  parkN: "パク・ムンチュン伝道師",
+  parkD: "東京サラン教会（동경사랑의교회）で仕える賛美奉仕者です。東京基督教大学（TCU）で神学を学びながら、賛美を通してイエス・キリストを伝えています。賛美と証しで共に礼拝します。",
+  bhD: "福岡・水谷にある福岡キリスト教会で共に礼拝している中高生の賛美チームです。クリスマスの特別賛美をきっかけに活動を始め、賛美の働きへの夢を抱いてイエスさまを歌っています。",
+  orgsT: "主催・協力団体のご紹介", orgsHint: "名前をタップすると紹介が開きます",
+  o_jmi_n: "日本宣教研究所",
+  o_jmi_1: "日本の状況に合った宣教政策と牧会戦略を研究し、チーム牧会などの具体的な宣教プログラムを開発するために設立された超教派の宣教研究機関です。2015年7月に開所し、キム・デホ牧師らが所長・代表として仕えています。",
+  o_jmi_2: "日韓の中高生・青年が共に集まり、日本の福音化のために交わり、現地の教会に仕える連合キャンプを定期的に開いています。日本宣教の特殊性をふまえた牧会戦略の研究、短期宣教、現地教会との協力の働きも続けています。",
+  o_ecc_n: "エクレシア・ミニストリー",
+  o_ecc_1: "ガラテヤ人への手紙6章14節を約束のみことばとして握り、すべての礼拝と奉仕の中でただイエスさまだけを誇り、イエスさまの痕跡を残すことを願う共同体です。",
+  o_ecc_2: "毎週月曜日の夜7時30分に共同体礼拝をささげ、神のみことばに基づいた正しい信仰告白の上に共同体を建て上げています。",
+  o_bhm_n: "ブレッシングヒル・ミニストリー",
+  o_bhm_1: "音響を通して福音に仕えるミニストリーです。古い音響機材に悩む日本の教会を訪ね、点検から入れ替え・設置までをサポートし、自前の音響機材で宣教チームや集会を支えています。",
+  o_bhm_2: "教会と団体をつなぐ「宣教の架け橋」としてワーシップネーションズ、ブライトホープと連合して働き、ブレッシングヒル・フェスティバルの名前もこのミニストリーから生まれました。代表はイ・ジヌ宣教師です。",
+  o_wn_n: "ワーシップネーションズ",
+  o_wn_1: "福岡の地域教会が共に礼拝できるよう仕える、地域教会連合の賛美ミニストリーです。2022年の連合賛美集会から始まり、2025年から第2期の働きを続けています。",
+  o_wn_2: "2026年6月にはブレッシングヒル・ミニストリー、ブライトホープと協力し、福岡・天神の広場で日韓18チームが共にしたブレッシングヒル・フェスティバルを主催しました。「10年は福岡、10年は日本全国、10年は世界宣教」という30年のビジョンを抱いています。",
+  heroAlt: "教会の中で笑顔でピースをする日韓の中高生・青年たちと、そのそばで一人の肩を抱いて一緒にほほえむイエスさまのイラスト",
   eyebrow: "日韓合同 日本語賛美集会",
   eyebrow2: "日韓合同 日本語賛美集会",
   h1: "日本の中高生・青年たちが<br>神さまを賛美するために<br>釜山へやって来ます。",
@@ -382,14 +513,14 @@ const JA = {
   map: "NAVERマップで見る ↗",
   dtPark: "駐車場", ddPark: "ポンネ（蓬莱）小学校の駐車場<small>週末は無料 · 教会まで徒歩2〜3分</small>",
   dtJoin: "参加", ddJoin: "事前申込制 · 参加無料",
-  dtTeam: "訪問団", ddTeam: "福岡の奉仕者と中高生賛美チーム 約15名",
-  dtHost: "主催", host: "日本宣教研究所 · エクレシア · ワーシップネーションズ · ブライトホープ",
+  dtTeam: "訪問チーム", ddTeam: "福岡の奉仕者と中高生賛美チーム 約15名<small>4泊5日、釜山に滞在します</small>",
+  dtHost: "主催", host: "日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ブライトホープ · ワーシップネーションズ",
   kWhy: "なぜこの集会なのか",
   hWhy: "飛行機でわずか1時間、<br>なのにまったく違う風景",
   why1: "日本はクリスチャンが人口の<span class=\"hl\">0.4%</span>にも満たない国です。街には神社やお寺がたくさんあっても十字架を見かけることは少なく、高齢化が進む教会では同世代の友だちに出会うことさえ簡単ではありません。",
   why2: "今回釜山を訪れるブライトホープとワーシップネーションズの中高生・青年たちは、その中でも「賛美で神さまを礼拝したい」という召しを受けた若者たちです。",
   st1: "日本のクリスチャン人口の割合", st2: "釜山–福岡の直線距離", st3: "韓国の10代のプロテスタント信者の割合",
-  why3: "11月7日、彼らと一緒に手を上げて賛美し、祈ってください。韓国の教会の熱い賛美にふれるこの数日間が、福岡と日本で長く燃え続ける火種になるかもしれません。そしてこの出会いは、<span class=\"hl\">2027年ブレッシングヒル・フェスティバル</span>へ向けた最初の一歩でもあります。",
+  why3: "11月7日、彼らと一緒に手を上げて、生きておられる主を賛美してください。両国の次世代がイエス・キリストの御名の前に共に立つこの時間が、福岡と日本で長く燃え続ける信仰の火種となるよう祈っています。そしてこの出会いは、<span class=\"hl\">2027年ブレッシングヒル・フェスティバル</span>へ向けた最初の一歩でもあります。",
   planeAlt: "夕焼けの空の下、飛行機の窓から見える釜山の海岸のイラスト",
   kWho: "ご招待", hWho: "こんな方をお招きします",
   chips: '<span class="chip">釜山の賛美チーム</span><span class="chip">中高生部・青年部</span><span class="chip">宣教団体</span><span class="chip">日本宣教に関心のあるすべての方</span>',
@@ -402,19 +533,23 @@ const JA = {
   soon2: "楽譜", soon2d: "賛美チーム向けのコード譜",
   kApply: "お申し込み方法", hApply: "申込書1枚でOKです",
   s1: "下のボタンから申込書を開いてください", s1d: "個人でも、教会・チーム単位でも、同じ申込書で受け付けています。",
-  s2: "2〜3分で記入できます", s2d: "団体でお申し込みの場合は、人数と引率者の連絡先もご記入ください。",
+  s2: "1〜2分で記入できます", s2d: "団体の場合は、代表者お一人が全体の人数だけご記入ください。",
   s3: "11月7日午後4時、ヨンジュ教会 本堂へ",
-  asks: "申込書でお聞きすること — <b>お名前、連絡先、所属教会、参加区分（個人／団体）、年代、賛美チームでのパート、日本語のレベル</b>。日本語のレベルは、同世代交流のグループ分けの参考にのみ使います。（申込書は韓国語です）",
+  asks: "申込書でお聞きすること — <b>お名前、連絡先、所属教会、年代、一緒に来る人数</b>。日本語のレベルと賛美のパートは任意で、同世代交流のグループ分けの参考にのみ使います。（申込書は韓国語です）",
   ctaForm: "申込書に記入する",
   pending: "申込書のリンクはまもなく公開されます。",
   kPray: "祈りの課題", hPray: "何よりもまず、祈りで共に歩んでください",
-  prayers: '<li data-n="1">日韓の次世代が、この出会いの中で神さまと人格的に出会えるように</li><li data-n="2">礼拝の中で一つになる恵みを体験できるように</li><li data-n="3">釜山の賛美チームと宣教団体に、日本宣教への新しい思いが注がれるように</li><li data-n="4">航空券・宿泊と必要な資金が満たされ、滞在中のすべての移動と健康が守られるように</li><li data-n="5">この集会が2027年ブレッシングヒル・フェスティバルの準備の始まりとなり、日韓の次世代をつなぐ宣教の関係へと広がっていくように</li>',
+  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">訪問チームの航空券・宿泊と必要な資金が満たされ、すべての移動と健康が守られるように</li>',
   room: "<b>カカオトークの祈りのグループで一緒に祈りましょう</b>より詳しい祈りの課題と準備の様子をシェアしています。どなたでも参加できます（カカオトークのアプリが必要です）。",
   roomBtn: "祈りのグループに参加する",
   kGive: "ご支援", hGive: "祈りとともに、献金でも共に歩んでください",
   giveLead: "まだ収入のない日本の中高生たちが釜山に来て礼拝できるよう、皆さまのご支援で両国の次世代をつなぐ架け橋を架けてください。",
   budgetLabel: "必要な予算",
-  b1: "航空・滞在費（訪問団15名）", b1v: "600万ウォン",
+  ppLab: "一人の訪問に", ppVal: "約40万ウォン",
+  ppText: "日本の中高生一人が釜山に来て、4泊5日間共に礼拝するための航空・滞在費です。一人ひとりの一歩を、共に支えてください。",
+  goal: "必要な予算の合計 <b>900万ウォン</b> · 小さな献金も尊い同労です",
+  budgetMore: "予算の内訳を見る",
+  b1: "航空・滞在費（訪問チーム15名、4泊5日）", b1v: "600万ウォン",
   b2: "当日の音響・施設運営費", b2v: "200万ウォン",
   b3: "通訳・広報費", b3v: "100万ウォン",
   bt: "合計", btv: "900万ウォン",
@@ -426,7 +561,7 @@ const JA = {
   giveNote: "6月のブレッシングヒル・フェスティバルでは献金の使いみちをすべて公開し、不足分は自費でまかないました。今回も集会後に決算を誠実にご報告します。",
   hNext: "次の物語は<br>福岡・天神で",
   nextLead: "釜山で始まるこの出会いは、2027年、福岡・天神のブレッシングヒル・フェスティバルへと続きます。詳しくはまもなくお知らせします。",
-  footHost: "主催 日本宣教研究所 · エクレシア · ワーシップネーションズ · ブライトホープ",
+  footHost: "主催 日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ブライトホープ · ワーシップネーションズ",
   barLabel: "参加申し込み",
   barT: "11/7（土）16:00 · 釜山ヨンジュ教会",
   ctaBar: "申し込む"
