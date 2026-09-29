@@ -131,6 +131,8 @@ details .org-body{padding:0 2px 18px;font-size:15px;color:var(--muted);display:g
 .focus-line{font-size:19px;color:var(--text);line-height:1.75}
 .hero .tagline{font-size:17px;color:var(--text);margin:-4px 0 14px;max-width:34em}
 
+:root[lang="ja"] .hero h1{font-size:clamp(26px,6.6vw,52px)}
+@media (min-width:720px){:root[lang="ja"] .hero h1{font-size:clamp(30px,3.2vw,46px)}}
 /* per-person giving */
 .per-person{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;background:var(--surface);border-radius:16px;padding:22px 22px;margin-bottom:14px}
 .pp-num{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
@@ -401,10 +403,10 @@ footer b{color:var(--muted);font-weight:500}
   <section id="give" aria-labelledby="h-give">
     <div class="kicker" data-i18n="kGive">후원</div>
     <h2 id="h-give" data-i18n="hGive">기도와 함께, 물질로도 동역해 주세요</h2>
-    <p class="lead" style="margin-bottom:24px" data-i18n="giveLead">아직 경제활동을 하지 않는 일본 청소년들이 부산에 와서 예배할 수 있도록, 여러분의 후원으로 두 나라 다음 세대를 잇는 다리를 놓아 주세요.</p>
+    <p class="lead" style="margin-bottom:24px" data-i18n="giveLead">일본 후쿠오카의 사역팀들이 부산에 와서 함께 예배하고 기도할 수 있도록, 물심양면으로 두 나라 다음 세대를 잇는 다리를 놓아 주시길 부탁드립니다.</p>
     <div class="per-person">
       <div class="pp-num"><span data-i18n="ppLab">한 사람의 방문</span><b data-i18n="ppVal">약 40만 원</b></div>
-      <p data-i18n="ppText">일본 청소년 한 명이 부산에 와서 4박 5일 동안 함께 예배하는 데 드는 항공·체류비예요. 한 사람의 발걸음을 함께 책임져 주세요.</p>
+      <p data-i18n="ppText">일본에서 오는 사역팀 한 명이 부산에 와서 4박 5일 동안 함께 예배하는 데 드는 최소한의 항공·체류비입니다. 예배와 사역을 위한 발걸음에 여러분의 따뜻한 마음을 모아주세요.</p>
     </div>
     <p class="goal" data-i18n="goal">전체 필요 예산 <b>900만 원</b> · 작은 금액도 귀한 동역입니다</p>
     <details class="budget-more">
@@ -470,7 +472,8 @@ footer b{color:var(--muted);font-weight:500}
 <script>
 /* ── 여기만 고치면 됩니다 ───────────────────────────── */
 const CONFIG = {
-  formUrl: "",                 // 구글폼 링크 (예: "https://forms.gle/xxxx")
+  formUrl: "",                 // 한국어 신청서 링크 (예: "https://forms.gle/xxxx")
+  formUrlJa: "",               // 일본어 신청서 링크 (비워 두면 한국어 신청서로 연결)
   deadline: "2026-11-04",      // 신청 마감일 (YYYY-MM-DD)
   contact: ""                  // 문의처 (예: "카카오톡 채널 @worshipnations")
 };
@@ -478,8 +481,8 @@ const CONFIG = {
 
 const JA = {
   tagline: "日韓の次世代が共にささげる、喜びの礼拝",
-  kFocus: "この集会の中心", hFocus: "共に礼拝する喜びへ、お招きします",
-  focusLine: "生きておられる主イエス・キリストに<span class=\"hl\">栄光</span>をお返しし、聖霊の<span class=\"hl\">力</span>を求め、一人ひとりが人格的な神さまと<span class=\"hl\">出会う</span>喜びの礼拝を期待しています。そして、日本とそこに生きる一人ひとりのたましい、日本の教会と礼拝のために、心を合わせて共に祈りたいと願っています。",
+  kFocus: "この集会の中心", hFocus: "共に礼拝をささげる喜び",
+  focusLine: "生きておられる主イエス・キリストに<span class=\"hl\">栄光</span>をお返しし、聖霊の<span class=\"hl\">力</span>を求め、一人ひとりが人格的な神さまと<span class=\"hl\">出会う</span>喜びの礼拝を待ち望んでいます。そして、日本とそこに生きる一人ひとりのたましい、日本の教会と礼拝のために、心を合わせて祈りたいと願っています。",
   kPeople: "賛美と証し", hPeople: "賛美と証しでイエスさまを礼拝します",
   parkAlt: "ステージで胸に手を当てて賛美するパク・ムンチュン伝道師",
   bhAlt: "十字架のある礼拝堂のステージで、ベース・ドラム・ギター・ピアノで共に賛美するブライトホープ4人のイラスト",
@@ -503,53 +506,53 @@ const JA = {
   heroAlt: "教会の中で笑顔でピースをする日韓の中高生・青年たちと、そのそばで一人の肩を抱いて一緒にほほえむイエスさまのイラスト",
   eyebrow: "日韓合同 日本語賛美集会",
   eyebrow2: "日韓合同 日本語賛美集会",
-  h1: "日本の中高生・青年たちが<br>神さまを賛美するために<br>釜山へやって来ます。",
+  h1: "福岡の中高生・青年たちが<br>神さまを賛美するために<br>釜山へ行きます。",
   when: "<b>2026年11月7日（土）16:00–18:30</b><br>釜山ヨンジュ教会 本堂 · 参加無料 · 事前申込制",
   ctaHero: "参加を申し込む",
   kInfo: "集会のご案内",
-  hInfo: "11月7日、ヨンジュ教会でお会いしましょう",
+  hInfo: "11月7日、釜山ヨンジュ教会で",
   dtWhen: "日時", ddWhen: "2026年11月7日（土）16:00–18:30",
   dtWhere: "場所", ddWhere: "釜山ヨンジュ（瀛州）教会 本堂",
   map: "NAVERマップで見る ↗",
   dtPark: "駐車場", ddPark: "ポンネ（蓬莱）小学校の駐車場<small>週末は無料 · 教会まで徒歩2〜3分</small>",
   dtJoin: "参加", ddJoin: "事前申込制 · 参加無料",
-  dtTeam: "訪問チーム", ddTeam: "福岡の奉仕者と中高生賛美チーム 約15名<small>4泊5日、釜山に滞在します</small>",
+  dtTeam: "奉仕チーム", ddTeam: "福岡の奉仕者と中高生・青年の賛美チーム 約15名<small>4泊5日で釜山へ行きます</small>",
   dtHost: "主催", host: "日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ブライトホープ · ワーシップネーションズ",
-  kWhy: "なぜこの集会なのか",
-  hWhy: "飛行機でわずか1時間、<br>なのにまったく違う風景",
-  why1: "日本はクリスチャンが人口の<span class=\"hl\">0.4%</span>にも満たない国です。街には神社やお寺がたくさんあっても十字架を見かけることは少なく、高齢化が進む教会では同世代の友だちに出会うことさえ簡単ではありません。",
-  why2: "今回釜山を訪れるブライトホープとワーシップネーションズの中高生・青年たちは、その中でも「賛美で神さまを礼拝したい」という召しを受けた若者たちです。",
+  kWhy: "なぜ釜山へ行くのか",
+  hWhy: "飛行機でわずか1時間。<br>そこに、共に賛美する<br>仲間がいます",
+  why1: "日本のクリスチャンは人口の<span class=\"hl\">0.4%</span>ほど。街で十字架を見かけることは少なく、教会で同世代の友だちに出会うことも、決して当たり前ではありません。",
+  why2: "そんな中でブライトホープとワーシップネーションズの中高生・青年たちは、賛美を通して神さまを礼拝することを喜びとし、自分たちに与えられた賜物で主に仕えたいと願って歩んできました。",
   st1: "日本のクリスチャン人口の割合", st2: "釜山–福岡の直線距離", st3: "韓国の10代のプロテスタント信者の割合",
-  why3: "11月7日、彼らと一緒に手を上げて、生きておられる主を賛美してください。両国の次世代がイエス・キリストの御名の前に共に立つこの時間が、福岡と日本で長く燃え続ける信仰の火種となるよう祈っています。そしてこの出会いは、<span class=\"hl\">2027年ブレッシングヒル・フェスティバル</span>へ向けた最初の一歩でもあります。",
+  why3: "釜山では、同じ主を愛する韓国の中高生・青年たちが待っています。言葉は違っても、同じ神さまを賛美し、共に祈る。その経験は、日本に帰ってからも私たちの信仰を支える力になります。そしてこの出会いは、日韓の次世代が互いに支え合い、共に宣教を担っていく関係の始まりであり、<span class=\"hl\">2027年ブレッシングヒル・フェスティバル</span>へ向けた最初の一歩でもあります。",
   planeAlt: "夕焼けの空の下、飛行機の窓から見える釜山の海岸のイラスト",
-  kWho: "ご招待", hWho: "こんな方をお招きします",
+  kWho: "釜山で共に礼拝する方々", hWho: "釜山で、こんな方々と共に礼拝します",
   chips: '<span class="chip">釜山の賛美チーム</span><span class="chip">中高生部・青年部</span><span class="chip">宣教団体</span><span class="chip">日本宣教に関心のあるすべての方</span>',
-  whoNote: "日本語がわからなくても大丈夫。はじめて聞く歌詞でも、私たちは同じ神さまを賛美します。",
+  whoNote: "言葉が違っても大丈夫。はじめて聞く歌詞でも、私たちは同じ神さまを賛美します。",
   kSongs: "一緒に歌う賛美",
   hSongs: "賛美リストと楽譜、まもなく公開します",
   songsLead: "当日、韓国語と日本語で一緒に歌う賛美を選んでいます。賛美チームの皆さんが事前に練習できるよう、準備ができしだいここでお知らせします。",
   prep: "準備中", prep2: "準備中",
   soon1: "賛美リスト", soon1d: "曲名と韓国語・日本語の歌詞",
   soon2: "楽譜", soon2d: "賛美チーム向けのコード譜",
-  kApply: "お申し込み方法", hApply: "申込書1枚でOKです",
+  kApply: "お申し込み方法", hApply: "釜山で参加される方は、こちらからお申し込みください",
   s1: "下のボタンから申込書を開いてください", s1d: "個人でも、教会・チーム単位でも、同じ申込書で受け付けています。",
   s2: "1〜2分で記入できます", s2d: "団体の場合は、代表者お一人が全体の人数だけご記入ください。",
   s3: "11月7日午後4時、ヨンジュ教会 本堂へ",
-  asks: "申込書でお聞きすること — <b>お名前、連絡先、所属教会、年代、一緒に来る人数</b>。日本語のレベルと賛美のパートは任意で、同世代交流のグループ分けの参考にのみ使います。（申込書は韓国語です）",
+  asks: "申込書でお聞きすること — <b>お名前、連絡先、所属教会、年代、一緒に行く人数</b>。韓国語のレベルと賛美のパートは任意で、同世代交流のグループ分けの参考にのみ使います。",
   ctaForm: "申込書に記入する",
   pending: "申込書のリンクはまもなく公開されます。",
   kPray: "祈りの課題", hPray: "何よりもまず、祈りで共に歩んでください",
-  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">訪問チームの航空券・宿泊と必要な資金が満たされ、すべての移動と健康が守られるように</li>',
+  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">釜山へ行く奉仕チームの航空券・宿泊と必要な資金が満たされ、すべての移動と健康が守られるように</li>',
   room: "<b>カカオトークの祈りのグループで一緒に祈りましょう</b>より詳しい祈りの課題と準備の様子をシェアしています。どなたでも参加できます（カカオトークのアプリが必要です）。",
   roomBtn: "祈りのグループに参加する",
   kGive: "ご支援", hGive: "祈りとともに、献金でも共に歩んでください",
-  giveLead: "まだ収入のない日本の中高生たちが釜山に来て礼拝できるよう、皆さまのご支援で両国の次世代をつなぐ架け橋を架けてください。",
+  giveLead: "福岡の奉仕チームが釜山へ行き、韓国の兄弟姉妹と共に礼拝し祈ることができるよう、祈りと献金の両面から、両国の次世代をつなぐ架け橋を共に架けていただけますよう、心よりお願い申し上げます。",
   budgetLabel: "必要な予算",
-  ppLab: "一人の訪問に", ppVal: "約40万ウォン",
-  ppText: "日本の中高生一人が釜山に来て、4泊5日間共に礼拝するための航空・滞在費です。一人ひとりの一歩を、共に支えてください。",
+  ppLab: "一人を送り出すために", ppVal: "約40万ウォン",
+  ppText: "福岡から釜山へ向かう奉仕チーム一人あたりの、4泊5日の最低限の航空・滞在費です。礼拝と奉仕のための一歩に、皆さまの温かい思いを寄せてください。",
   goal: "必要な予算の合計 <b>900万ウォン</b> · 小さな献金も尊い同労です",
   budgetMore: "予算の内訳を見る",
-  b1: "航空・滞在費（訪問チーム15名、4泊5日）", b1v: "600万ウォン",
+  b1: "航空・滞在費（奉仕チーム15名、4泊5日）", b1v: "600万ウォン",
   b2: "当日の音響・施設運営費", b2v: "200万ウォン",
   b3: "通訳・広報費", b3v: "100万ウォン",
   bt: "合計", btv: "900万ウォン",
@@ -560,7 +563,7 @@ const JA = {
   copy: "口座番号をコピー",
   giveNote: "6月のブレッシングヒル・フェスティバルでは献金の使いみちをすべて公開し、不足分は自費でまかないました。今回も集会後に決算を誠実にご報告します。",
   hNext: "次の物語は<br>福岡・天神で",
-  nextLead: "釜山で始まるこの出会いは、2027年、福岡・天神のブレッシングヒル・フェスティバルへと続きます。詳しくはまもなくお知らせします。",
+  nextLead: "釜山で結ばれた交わりは、2027年、私たちの街・福岡天神でのブレッシングヒル・フェスティバルへと続きます。今度は福岡で、日韓の仲間たちと共に賛美します。詳しくはまもなくお知らせします。",
   footHost: "主催 日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ブライトホープ · ワーシップネーションズ",
   barLabel: "参加申し込み",
   barT: "11/7（土）16:00 · 釜山ヨンジュ教会",
@@ -578,7 +581,7 @@ const JA = {
   const wd = new Date(CONFIG.deadline + "T12:00:00+09:00").getDay();
   const days = Math.ceil((dl - new Date()) / 86400000);
   const closed = days < 0;
-  const hasForm = /^https:\/\//.test(CONFIG.formUrl);
+  const isUrl = u => /^https:\/\//.test(u || "");
   const contact = CONFIG.contact.replace(/[<>&]/g, "");
 
   const T = {
@@ -605,6 +608,7 @@ const JA = {
 
   function render(){
     const dict = lang === "ja" ? JA : KO, t = T[lang];
+    const formUrl = (lang === "ja" && isUrl(CONFIG.formUrlJa)) ? CONFIG.formUrlJa : (isUrl(CONFIG.formUrl) ? CONFIG.formUrl : "");
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
     document.querySelectorAll("[data-i18n-alt]").forEach(el => { const v = dict[el.dataset.i18nAlt]; if (v != null) el.alt = v; });
@@ -619,10 +623,10 @@ const JA = {
 
     document.querySelectorAll(".js-form").forEach(a => {
       if (closed) { a.textContent = t.closedBtn; a.setAttribute("aria-disabled", "true"); a.removeAttribute("href"); return; }
-      if (hasForm) { a.href = CONFIG.formUrl; a.target = "_blank"; a.rel = "noopener"; }
+      if (formUrl) { a.href = formUrl; a.target = "_blank"; a.rel = "noopener"; } else { a.href = "#apply"; a.removeAttribute("target"); }
     });
     const pend = document.querySelector(".js-pending");
-    if (pend) pend.hidden = hasForm || closed;
+    if (pend) pend.hidden = !!formUrl || closed;
   }
 
   function setLang(l){
