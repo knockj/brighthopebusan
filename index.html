@@ -257,6 +257,11 @@ footer b{color:var(--muted);font-weight:500}
 @media (min-width:720px){
   :root[lang="ja"] .hero-in > h1{max-width:620px;font-size:clamp(30px,3vw,44px)}
 }
+
+/* 신청서 언어 안내 (작은 글씨) */
+.form-note{margin-top:12px;font-size:13px;line-height:1.6;color:var(--faint)}
+.form-note a{color:var(--sky);font-weight:700;text-decoration:none;white-space:nowrap}
+.form-note a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -281,6 +286,7 @@ footer b{color:var(--muted);font-weight:500}
       <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaHero">참가 신청하기</a>
       <span class="dday js-dday"></span>
     </div>
+    <p class="form-note js-form-note" data-i18n="formNote">한국어·일본어 두 가지 신청서가 있어요. 가장 편한 언어로 신청해 주세요.<br><a class="js-form-ko" href="#apply" target="_blank" rel="noopener">한국어 신청서 ↗</a> · <a class="js-form-ja" href="#apply" target="_blank" rel="noopener">日本語 申込書 ↗</a></p>
   </div>
 </header>
 
@@ -388,6 +394,7 @@ footer b{color:var(--muted);font-weight:500}
       <a class="btn btn-gold js-form" href="#apply" data-i18n="ctaForm">신청서 작성하기</a>
       <span class="pending js-pending" hidden data-i18n="pending">신청서 링크는 곧 열립니다.</span>
     </div>
+    <p class="form-note js-form-note" data-i18n="formNote">한국어·일본어 두 가지 신청서가 있어요. 가장 편한 언어로 신청해 주세요.<br><a class="js-form-ko" href="#apply" target="_blank" rel="noopener">한국어 신청서 ↗</a> · <a class="js-form-ja" href="#apply" target="_blank" rel="noopener">日本語 申込書 ↗</a></p>
   </section>
 
   <section id="pray" aria-labelledby="h-pray">
@@ -479,8 +486,8 @@ footer b{color:var(--muted);font-weight:500}
 <script>
 /* ── 여기만 고치면 됩니다 ───────────────────────────── */
 const CONFIG = {
-  formUrl: "",                 // 한국어 신청서 링크 (예: "https://forms.gle/xxxx")
-  formUrlJa: "",               // 일본어 신청서 링크 (비워 두면 한국어 신청서로 연결)
+  formUrl: "https://forms.gle/FiP8WVdXnMXss8JE9",     // 한국어 신청서 링크
+  formUrlJa: "https://forms.gle/wG8xFt9BB4msoxf99",   // 일본어 신청서 링크
   deadline: "2026-11-04",      // 신청 마감일 (YYYY-MM-DD)
   contact: ""                  // 문의처 (예: "카카오톡 채널 @worshipnations")
 };
@@ -516,6 +523,7 @@ const JA = {
   h1: '<span class="jp-line"><span class="jp-p">日本の中高生・</span><span class="jp-p">青年たちが</span></span><span class="jp-line"><span class="jp-p">神さまを</span><span class="jp-p">賛美するために</span></span><span class="jp-line"><span class="jp-p">釜山へ</span><span class="jp-p">やって来ます。</span></span>',
   when: "<b>2026年11月7日（土）16:00–18:30</b><br>釜山ヨンジュ教会 本堂 · 参加無料 · 事前申込制",
   ctaHero: "参加を申し込む",
+  formNote: '韓国語版と日本語版の2種類の申込書があります。いちばん使いやすい言語でお申し込みください。<br><a class="js-form-ko" href="#apply" target="_blank" rel="noopener">한국어 신청서 ↗</a> · <a class="js-form-ja" href="#apply" target="_blank" rel="noopener">日本語 申込書 ↗</a>',
   kInfo: "集会のご案内",
   hInfo: "11月7日、釜山ヨンジュ教会で",
   dtWhen: "日時", ddWhen: "2026年11月7日（土）16:00–18:30",
@@ -634,6 +642,12 @@ const JA = {
     });
     const pend = document.querySelector(".js-pending");
     if (pend) pend.hidden = !!formUrl || closed;
+
+    /* 한국어·일본어 신청서 안내 링크 */
+    const bothReady = isUrl(CONFIG.formUrl) && isUrl(CONFIG.formUrlJa);
+    document.querySelectorAll(".js-form-ko").forEach(a => a.href = CONFIG.formUrl);
+    document.querySelectorAll(".js-form-ja").forEach(a => a.href = CONFIG.formUrlJa);
+    document.querySelectorAll(".js-form-note").forEach(el => el.hidden = closed || !bothReady);
   }
 
   function setLang(l){
