@@ -495,6 +495,15 @@ const CONFIG = {
 };
 /* ──────────────────────────────────────────────────── */
 
+/* 방문 통계 (GoatCounter) — 이벤트 기록 */
+function track(path, title){
+  let n = 0;
+  (function go(){
+    if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: path, title: title, event: true });
+    else if (n++ < 20) setTimeout(go, 500);
+  })();
+}
+
 const JA = {
   tagline: "日韓の次世代が共にささげる、喜びの礼拝",
   kFocus: "この集会の中心", hFocus: "共に礼拝をささげる喜び",
@@ -656,6 +665,7 @@ const JA = {
     lang = l === "ja" ? "ja" : "ko";
     try { localStorage.setItem("bhw-lang", lang); } catch (e) {}
     render();
+    if (lang === "ja") track("lang-ja", "일본어 화면으로 보기");
   }
 
   document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
@@ -666,6 +676,17 @@ const JA = {
   if (location.hash === "#ko") start = "ko";
   lang = start;
   render();
+  if (lang === "ja") track("lang-ja", "일본어 화면으로 보기");
+
+  /* 버튼 클릭 수 세기 (신청서 · 미션펀드 · 기도방) */
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a");
+    if (!a || !a.href) return;
+    if (a.matches(".js-form-ja") || (a.matches(".js-form") && lang === "ja" && /forms\.gle|google\.com\/forms/.test(a.href))) track("click-form-ja", "일본어 신청서 열기");
+    else if (a.matches(".js-form-ko, .js-form") && /forms\.gle|google\.com\/forms/.test(a.href)) track("click-form-ko", "한국어 신청서 열기");
+    else if (/missionfund/.test(a.href)) track("click-missionfund", "미션펀드 후원 열기");
+    else if (/kakao\.com/.test(a.href)) track("click-kakao", "카카오톡 기도방 열기");
+  });
 
   const btn = document.getElementById("copy");
   btn.addEventListener("click", () => {
@@ -677,6 +698,9 @@ const JA = {
   });
 })();
 </script>
+
+<!-- 방문 통계 (GoatCounter): brighthopebusan 부분을 가입한 이름으로 바꾸세요 -->
+<script data-goatcounter="https://brighthopebusan.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
