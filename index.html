@@ -250,6 +250,13 @@ footer b{color:var(--muted);font-weight:500}
   .hero-in > *{max-width:500px}
   .hero h1{font-size:clamp(34px,3.4vw,50px)}
 }
+
+/* 일본어 제목: 문구 단위로만 줄바꿈 */
+.jp-line{display:block}
+.jp-p{display:inline-block}
+@media (min-width:720px){
+  :root[lang="ja"] .hero-in > h1{max-width:620px;font-size:clamp(30px,3vw,44px)}
+}
 </style>
 </head>
 <body>
@@ -506,7 +513,7 @@ const JA = {
   heroAlt: "教会の中で笑顔でピースをする日韓の中高生・青年たちと、そのそばで一人の肩を抱いて一緒にほほえむイエスさまのイラスト",
   eyebrow: "日韓合同 日本語賛美集会",
   eyebrow2: "日韓合同 日本語賛美集会",
-  h1: "福岡の中高生・青年たちが<br>神さまを賛美するために<br>釜山へ行きます。",
+  h1: '<span class="jp-line"><span class="jp-p">日本の中高生・</span><span class="jp-p">青年たちが</span></span><span class="jp-line"><span class="jp-p">神さまを</span><span class="jp-p">賛美するために</span></span><span class="jp-line"><span class="jp-p">釜山へ</span><span class="jp-p">やって来ます。</span></span>',
   when: "<b>2026年11月7日（土）16:00–18:30</b><br>釜山ヨンジュ教会 本堂 · 参加無料 · 事前申込制",
   ctaHero: "参加を申し込む",
   kInfo: "集会のご案内",
