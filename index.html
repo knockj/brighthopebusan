@@ -148,10 +148,19 @@ details.budget-more{margin-bottom:22px;border:0}
 .budget-more summary::after{width:22px;height:22px;font-size:15px}
 .budget-more .budget{margin:4px 0 0}
 /* songs */
-.soon-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-.soon{border:1px dashed rgba(158,216,245,.45);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:6px}
-.soon b{font-size:17px}
-.soon span{font-size:14px;color:var(--muted)}
+.songs{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:10px}
+.song{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:6px 12px;background:var(--surface);border-radius:14px;padding:14px 16px}
+.song .no{font:var(--display-w) 17px/1 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.song .s-t{min-width:0}
+.song .s-t b{display:block;font-size:17px;line-height:1.4;font-family:'M PLUS 1p','Hiragino Sans',var(--body)}
+.song .s-t small{display:block;font-size:13px;color:var(--muted);line-height:1.5}
+.song .dl{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.dl-btn{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:1px solid rgba(158,216,245,.5);border-radius:999px;color:var(--sky);font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.dl-btn em{font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--faint)}
+.dl-btn:hover{background:rgba(158,216,245,.1)}
+.dl-btn:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.songs-more{margin-top:16px;font-size:14px;color:var(--muted)}
+.songs-more a{font-weight:700}
 .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--sky);border:1px solid rgba(158,216,245,.5);border-radius:999px;padding:3px 10px;margin-bottom:6px}
 
 /* steps */
@@ -217,7 +226,9 @@ footer b{color:var(--muted);font-weight:500}
   .hero::after{display:none}
   .hero picture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,27,16,.45) 0%,rgba(42,27,16,0) 16%,rgba(42,27,16,0) 54%,rgba(42,27,16,.62) 72%,rgba(42,27,16,.9) 86%,var(--bg) 100%)}
   .hero .eyebrow,.hero h1{text-shadow:0 1px 10px rgba(20,12,6,.7)}
-  .soon-grid,.ways,.focus,.people{grid-template-columns:1fr}
+  .ways,.focus,.people{grid-template-columns:1fr}
+  .song{grid-template-columns:28px 1fr}
+  .song .dl{grid-column:2;justify-content:flex-start}
   .next{grid-template-columns:1fr}
   .next-img{max-width:340px}
 }
@@ -385,12 +396,19 @@ footer b{color:var(--muted);font-weight:500}
 
   <section id="songs" aria-labelledby="h-songs">
     <div class="kicker" data-i18n="kSongs">함께 부를 찬양</div>
-    <h2 id="h-songs" data-i18n="hSongs">찬양 리스트와 악보, 곧 공유할게요</h2>
-    <p class="lead" data-i18n="songsLead">이날 한국어와 일본어로 함께 부를 찬양을 고르고 있어요. 찬양팀이 미리 연습할 수 있도록 준비되는 대로 이곳에 올려 드립니다.</p>
-    <div class="soon-grid">
-      <div class="soon"><span class="tag" data-i18n="prep">준비 중</span><b data-i18n="soon1">찬양 리스트</b><span data-i18n="soon1d">곡명과 한국어·일본어 가사</span></div>
-      <div class="soon"><span class="tag" data-i18n="prep2">준비 중</span><b data-i18n="soon2">악보</b><span data-i18n="soon2d">찬양팀을 위한 코드 악보</span></div>
-    </div>
+    <h2 id="h-songs" data-i18n="hSongs">찬양 리스트와 악보</h2>
+    <p class="lead" data-i18n="songsLead">브라이트호프 찬양팀이 이날 부를 찬양 여덟 곡이에요. 악보를 내려받아 미리 함께 불러 보세요.</p>
+    <ol class="songs">
+      <li class="song"><span class="no">01</span><div class="s-t"><b>Nothing is impossible</b></div><div class="dl"><a class="dl-btn js-score" data-score="01" href="https://drive.google.com/uc?export=download&amp;id=1l5zaZRzh0qu4eMgNVJnAGgSWRlx-o-tC" rel="noopener"><span data-i18n="dlOrig">원본 악보</span><em>PNG</em></a><a class="dl-btn js-score" data-score="01-jp" href="https://drive.google.com/uc?export=download&amp;id=1U3LkCpeqzd19zK3havKiCUelMph9D9ce" rel="noopener"><span data-i18n="dlJp">일본어 악보</span><em>PNG</em></a></div></li>
+      <li class="song"><span class="no">02</span><div class="s-t"><b lang="ja">賛美せよ</b><small data-i18n="n02">한국어로 불러요 · G키</small></div><div class="dl"><a class="dl-btn js-score" data-score="02" href="https://drive.google.com/uc?export=download&amp;id=1bVy_acWdeTR2fwfp_JGRiIv15gMG-VXp" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PNG</em></a></div></li>
+      <li class="song"><span class="no">03</span><div class="s-t"><b lang="ja">エリヤの日</b><small data-i18n="n03">Days of Elijah 일본어판</small></div><div class="dl"><a class="dl-btn js-score" data-score="03" href="https://drive.google.com/uc?export=download&amp;id=1uwP-4qOTS0Z9nYXgV4DoyLl7XHRltv-p" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">04</span><div class="s-t"><b lang="ja">どんな時でも</b></div><div class="dl"><a class="dl-btn js-score" data-score="04" href="https://drive.google.com/uc?export=download&amp;id=1268RQoNqK5dp4RzJu5SZIdsH2sOzdyTg" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">05</span><div class="s-t"><b lang="ja">我が心の目を</b><small data-i18n="n05">Open the Eyes of My Heart 일본어판</small></div><div class="dl"><a class="dl-btn js-score" data-score="05" href="https://drive.google.com/uc?export=download&amp;id=12S3DXOwWZLgMNPXtnXuBWFjq7UHkCx7D" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">06</span><div class="s-t"><b>You are good</b><small data-i18n="n06">영어 악보</small></div><div class="dl"><a class="dl-btn js-score" data-score="06" href="https://drive.google.com/uc?export=download&amp;id=19hPaFPlyZRQij_9qG6-V1pPjV8HMJi6d" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">07</span><div class="s-t"><b lang="ja">あなたの言う通り</b></div><div class="dl"><a class="dl-btn js-score" data-score="07" href="https://drive.google.com/uc?export=download&amp;id=1xN-PcD4H1cYbFaNSi1bjl08iHzxJ9o3W" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PNG</em></a></div></li>
+      <li class="song"><span class="no">08</span><div class="s-t"><b lang="ja">御腕に抱いて</b><small data-i18n="n08">A키</small></div><div class="dl"><a class="dl-btn js-score" data-score="08" href="https://drive.google.com/uc?export=download&amp;id=1IxTeRq8ZSvkJHgN5zMcAZVzfq3zXIBKA" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+    </ol>
+    <p class="songs-more"><a href="https://drive.google.com/drive/folders/1bZwtIM0n2ywBpI6NiwQMFOKczsDgu14r" target="_blank" rel="noopener" data-i18n="songsFolder">구글 드라이브에서 악보 전체 보기 ↗</a><br><span data-i18n="songsNote">곡 순서는 당일 바뀔 수 있어요.</span></p>
   </section>
 
   <section id="apply" aria-labelledby="h-apply">
@@ -575,11 +593,10 @@ const JA = {
   chips: '<span class="chip">釜山・韓国に住んでいる日本人の方</span><span class="chip">釜山の賛美チーム</span><span class="chip">中高生部・青年部</span><span class="chip">宣教団体</span><span class="chip">日本宣教に関心のあるすべての方</span>',
   whoNote: "言葉が違っても大丈夫。はじめて聞く歌詞でも、私たちは同じ神さまを賛美します。",
   kSongs: "一緒に歌う賛美",
-  hSongs: "賛美リストと楽譜、まもなく公開します",
-  songsLead: "当日、韓国語と日本語で一緒に歌う賛美を選んでいます。賛美チームの皆さんが事前に練習できるよう、準備ができしだいここでお知らせします。",
-  prep: "準備中", prep2: "準備中",
-  soon1: "賛美リスト", soon1d: "曲名と韓国語・日本語の歌詞",
-  soon2: "楽譜", soon2d: "賛美チーム向けのコード譜",
+  hSongs: "賛美リストと楽譜",
+  songsLead: "ブライトホープ賛美チームが当日歌う8曲です。楽譜をダウンロードして、事前に一緒に歌ってみてください。",
+  dlOrig: "原曲の楽譜", dlJp: "日本語の楽譜", n02: "韓国語で歌います · Gキー", dlBtn: "楽譜をダウンロード", n03: "Days of Elijah 日本語版", n05: "Open the Eyes of My Heart 日本語版", n06: "英語の楽譜", n08: "Aキー",
+  songsFolder: "Googleドライブで楽譜をまとめて見る ↗", songsNote: "曲順は当日変わることがあります。",
   kApply: "お申し込み方法", hApply: "釜山で参加される方は、こちらからお申し込みください",
   s1: "下のボタンから申込書を開いてください", s1d: "個人でも、教会・チーム単位でも、同じ申込書で受け付けています。",
   s2: "1〜2分で記入できます", s2d: "団体の場合は、代表者お一人が全体の人数だけご記入ください。",
@@ -707,6 +724,7 @@ const JA = {
     else if (a.matches(".js-form-ko, .js-form") && /forms\.gle|google\.com\/forms/.test(a.href)) track("click-form-ko", "한국어 신청서 열기");
     else if (/missionfund/.test(a.href)) track("click-missionfund", "미션펀드 후원 열기");
     else if (/kakao\.com/.test(a.href)) track("click-kakao", "카카오톡 기도방 열기");
+    else if (a.matches(".js-score")) track("score-" + a.dataset.score, "악보 받기 " + a.dataset.score);
   });
 
   const btn = document.getElementById("copy");
