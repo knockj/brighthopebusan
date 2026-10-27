@@ -135,6 +135,22 @@ details .org-body{padding:0 2px 18px;font-size:15px;color:var(--muted);display:g
 
 :root[lang="ja"] .hero h1{font-size:clamp(26px,6.6vw,52px)}
 @media (min-width:720px){:root[lang="ja"] .hero h1{font-size:clamp(30px,3.2vw,46px)}}
+
+/* program */
+.prog{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--line)}
+.prog li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.prog time{font:var(--display-w) 18px/1.3 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.prog b{font-size:16px}
+.prog small{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.status{margin-top:14px;font-size:16px;background:var(--surface);border-radius:14px;padding:14px 18px}
+.status b{color:var(--gold)}
+.status small,.fund-t small{display:block;font-size:13px;color:var(--faint);margin-top:2px}
+.fund{background:var(--surface);border-radius:16px;padding:20px 22px;margin:6px 0 26px}
+.fund-t{font-size:17px;margin:0 0 12px}
+.fund-t b{color:var(--gold);font:var(--display-w) clamp(26px,6vw,34px)/1.1 var(--display);margin:0 2px}
+.fund-bar{height:12px;border-radius:999px;background:var(--surface-2);overflow:hidden}
+.fund-bar i{display:block;height:100%;border-radius:999px;background:var(--gold)}
+
 /* per-person giving */
 .per-person{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;background:var(--surface);border-radius:16px;padding:22px 22px;margin-bottom:14px}
 .pp-num{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
@@ -284,7 +300,7 @@ footer b{color:var(--muted);font-weight:500}
 <header class="hero">
   <picture>
     <source media="(min-width:720px)" srcset="img/hero-jesus-wide.jpg">
-    <img src="img/hero-jesus-tall.jpg" data-i18n-alt="heroAlt" alt="heroAlt">
+    <img src="img/hero-jesus-tall.jpg" data-i18n-alt="heroAlt" alt="교회 안에서 웃으며 브이를 하는 한일 청소년·청년들과, 한 사람의 어깨를 안고 함께 미소 짓는 예수님 일러스트">
   </picture>
   <div class="handle">BRIGHT HOPE WORSHIP IN BUSAN</div>
   <div class="lang" role="group" aria-label="언어 / 言語">
@@ -314,7 +330,8 @@ footer b{color:var(--muted);font-weight:500}
       <dt data-i18n="dtWhere">장소</dt><dd><span data-i18n="ddWhere">부산 영주교회 본당</span><small>부산 중구 대영로226번안길 6</small><a href="https://naver.me/FXnGOx2v" target="_blank" rel="noopener" data-i18n="map">네이버 지도에서 보기 ↗</a></dd>
       <dt data-i18n="dtPark">주차</dt><dd data-i18n="ddPark">봉래초등학교 주차장<small>주말 무료 · 교회까지 걸어서 2–3분</small></dd>
       <dt data-i18n="dtJoin">참가</dt><dd><span data-i18n="ddJoin">사전 신청제 · 참가비 무료</span><small class="js-deadline-text"></small></dd>
-      <dt data-i18n="dtTeam">방문팀</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 15명 내외<small>4박 5일 동안 부산에 머뭅니다</small></dd>
+      <dt data-i18n="dtTeam">방문팀</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 13명<small>11월 6일(금)–9일(월), 3박 4일 동안 부산에 머뭅니다</small></dd>
+      <dt data-i18n="dtWord">말씀</dt><dd data-i18n="ddWord">이누부세 세이치 목사님<small>수영로교회 일본어예배</small></dd>
       <dt data-i18n="dtHost">주최</dt><dd data-i18n="host">일본선교연구소 · 에클레시아 · 블레싱힐 미니스트리 · 워십네이션스</dd>
     </dl>
   </section>
@@ -323,6 +340,22 @@ footer b{color:var(--muted);font-weight:500}
     <div class="kicker" data-i18n="kFocus">이 집회의 중심</div>
     <h2 id="h-focus" data-i18n="hFocus">함께 예배하는 기쁨으로 초대합니다</h2>
     <p class="lead focus-line" data-i18n="focusLine">살아계신 주 예수 그리스도께 <span class="hl">영광</span>을 돌리고, 성령의 <span class="hl">능력</span>을 구하며, 한 사람 한 사람이 인격적인 하나님을 <span class="hl">만나는</span> 기쁨의 예배를 기대합니다. 그리고 일본과 그 땅에서 살아가는 영혼들, 일본의 교회와 예배를 위해 함께 마음을 모아 기도하길 원합니다.</p>
+    <p class="lead" style="margin-top:16px" data-i18n="focusNet">예배에 더해, 일본을 위해 기도하고 계획하는 분들과 얼굴을 마주하고 기도하며 <span class="hl">실제적인 선교 네트워크</span>를 만들어 가는 시작이 되길 바랍니다.</p>
+  </section>
+
+  <section id="program" aria-labelledby="h-prog">
+    <div class="kicker" data-i18n="kProg">프로그램</div>
+    <h2 id="h-prog" data-i18n="hProg">오후 4시, 이렇게 드립니다</h2>
+    <ol class="prog" data-i18n="progList">
+      <li><time>16:00</time><div><b>시작 인사와 기도</b></div></li>
+      <li><time>16:05</time><div><b>Bright Hope 일본어 찬양</b><small>30분 · 찬양 8곡</small></div></li>
+      <li><time>16:35</time><div><b>간증 · 기도 · 말씀</b><small>말씀 · 이누부세 세이치 목사님 (수영로교회 일본어예배)</small></div></li>
+      <li><time>17:05</time><div><b>박문춘 전도사 찬양과 간증</b><small>40분 · 찬양 6곡</small></div></li>
+      <li><time>17:45</time><div><b>기도 인도</b></div></li>
+      <li><time>18:00</time><div><b>축복송과 마무리 기도</b></div></li>
+      <li><time>18:10</time><div><b>교제의 시간</b></div></li>
+    </ol>
+    <p class="note" data-i18n="progNote">순서와 시간은 현장 사정에 따라 조정될 수 있어요.</p>
   </section>
 
   <section id="why" aria-labelledby="h-why">
@@ -330,6 +363,7 @@ footer b{color:var(--muted);font-weight:500}
     <h2 id="h-why" data-i18n="hWhy">비행기로 1시간,<br>그런데 전혀 다른 풍경</h2>
     <p class="lead" data-i18n="why1">일본은 그리스도인이 인구의 <span class="hl">0.4%</span>에도 미치지 못하는 나라입니다. 골목마다 신사와 절이 있지만 십자가를 찾기는 어렵고, 고령화로 교회에서 또래 친구를 만나기도 쉽지 않습니다.</p>
     <p class="lead" data-i18n="why2">이번에 부산을 찾는 브라이트호프와 워십네이션스의 청소년·청년들은 그 안에서도 "찬양으로 하나님을 예배하겠다"는 부르심을 품은 이들입니다.</p>
+    <p class="lead" data-i18n="why2b">일본교회와 한국교회는 처한 사정과 입장이 서로 다르고 현실적인 한계도 있어, 협력이 어렵거나 열매로 이어지기 힘든 시간이 오래 이어져 왔습니다. 그래서 먼저 얼굴을 마주하고 함께 예배하고 기도하는 자리에서 <span class="hl">관계를 시작</span>하려 합니다.</p>
     <div class="stats">
       <div class="stat"><b>0.4%</b><span data-i18n="st1">일본의 그리스도인 비율</span></div>
       <div class="stat"><b>214km</b><span data-i18n="st2">부산–후쿠오카 직선거리</span></div>
@@ -414,6 +448,8 @@ footer b{color:var(--muted);font-weight:500}
   <section id="apply" aria-labelledby="h-apply">
     <div class="kicker" data-i18n="kApply">신청 방법</div>
     <h2 id="h-apply" data-i18n="hApply">신청서 한 장이면 충분해요</h2>
+    <!-- 신청 현황: 숫자와 기준일은 직접 고쳐 주세요 (JA 문구는 아래 JA.status) -->
+    <p class="status" data-i18n="status">지금까지 <b>57건 · 151명</b>이 신청했어요. 부산 밖 40여 곳에서도 함께합니다.<small>10월 26일 기준</small></p>
     <ol class="steps">
       <li><b data-i18n="s1">아래 버튼으로 신청서를 여세요</b><span data-i18n="s1d">개인 신청도, 교회·팀 단위 신청도 한 신청서에서 받습니다.</span></li>
       <li><b data-i18n="s2">1–2분이면 작성할 수 있어요</b><span data-i18n="s2d">단체라면 대표자 한 분이 전체 인원만 적어 주세요.</span></li>
@@ -436,7 +472,8 @@ footer b{color:var(--muted);font-weight:500}
       <li data-n="3">성령의 능력이 임하여, 한일 다음 세대가 언어와 국경을 넘어 예수 안에서 하나 되도록</li>
       <li data-n="4">찬양과 간증으로 섬기는 모든 사역자가 오직 예수님만 자랑하도록</li>
       <li data-n="5">일본과 그 땅에서 살아가는 영혼들에게 복음의 길이 열리고, 일본의 교회와 예배가 새롭게 일어나도록</li>
-      <li data-n="6">방문팀의 항공·숙소와 필요한 재정이 채워지고, 4박 5일의 모든 이동과 건강이 지켜지도록</li>
+      <li data-n="6">이 만남이 일본을 위해 기도하고 계획하는 분들과 이어지는 선교 네트워크의 시작이 되도록</li>
+      <li data-n="7">방문팀의 항공·숙소와 필요한 재정이 채워지고, 3박 4일의 모든 이동과 건강이 지켜지도록</li>
     </ul>
     <div class="pray-room">
       <p data-i18n="room"><b>카카오톡 기도방에서 함께 기도해요</b>더 세밀한 기도제목과 준비 소식을 나눕니다. 누구나 참여할 수 있어요.</p>
@@ -447,21 +484,13 @@ footer b{color:var(--muted);font-weight:500}
   <section id="give" aria-labelledby="h-give">
     <div class="kicker" data-i18n="kGive">후원</div>
     <h2 id="h-give" data-i18n="hGive">기도와 함께, 물질로도 동역해 주세요</h2>
-    <p class="lead" style="margin-bottom:24px" data-i18n="giveLead">일본 후쿠오카의 사역팀들이 부산에 와서 함께 예배하고 기도할 수 있도록, 물심양면으로 두 나라 다음 세대를 잇는 다리를 놓아 주시길 부탁드립니다.</p>
-    <div class="per-person">
-      <div class="pp-num"><span data-i18n="ppLab">한 사람의 방문</span><b data-i18n="ppVal">약 40만 원</b></div>
-      <p data-i18n="ppText">일본에서 오는 사역팀 한 명이 부산에 와서 4박 5일 동안 함께 예배하는 데 드는 최소한의 항공·체류비입니다. 예배와 사역을 위한 발걸음에 여러분의 따뜻한 마음을 모아주세요.</p>
+    <p class="lead" data-i18n="giveLead">함께 가는 사역자들은 평신도로서 자비량으로 섬기고 있고, 한 가정에서 2~3명이 함께 가기도 합니다. 넉넉하지 않은 형편에도 하나님이 기뻐하시는 찬양 사역이 되길 기도하며, 비용은 망설임 없이 감당하려 합니다.</p>
+    <p class="lead" data-i18n="giveLead2">다만 재정 지원이 어려운 일본교회의 형편상 부담은 현실입니다. 특히 청소년과 교역자의 부담을 덜 수 있기를 기도하고 있으며, <span class="hl">이 만남이 선교 네트워크로 이어지도록</span> 함께해 주시면 감사하겠습니다.</p>
+    <!-- 모금 현황: width 숫자(%)와 기준일을 직접 고쳐 주세요 -->
+    <div class="fund">
+      <p class="fund-t" data-i18n="fund">필요한 재정 중 <b>약 16%</b>가 모였습니다<small>10월 26일 기준</small></p>
+      <div class="fund-bar" aria-hidden="true"><i style="width:16.1%"></i></div>
     </div>
-    <p class="goal" data-i18n="goal">전체 필요 예산 <b>900만 원</b> · 작은 금액도 귀한 동역입니다</p>
-    <details class="budget-more">
-      <summary data-i18n="budgetMore">예산 자세히 보기</summary>
-      <div class="budget" role="table" data-i18n-label="budgetLabel" aria-label="필요 예산">
-        <div role="row"><span role="cell" data-i18n="b1">항공·체류비 (방문팀 15명, 4박 5일)</span><span role="cell" data-i18n="b1v">600만 원</span></div>
-        <div role="row"><span role="cell" data-i18n="b2">현장 음향·시설 운영비</span><span role="cell" data-i18n="b2v">200만 원</span></div>
-        <div role="row"><span role="cell" data-i18n="b3">통역·홍보비</span><span role="cell" data-i18n="b3v">100만 원</span></div>
-        <div role="row" class="total"><span role="cell" data-i18n="bt">합계</span><span role="cell" data-i18n="btv">900만 원</span></div>
-      </div>
-    </details>
     <div class="ways">
       <div class="way">
         <span class="lab" data-i18n="w1lab">온라인 후원</span>
@@ -485,7 +514,7 @@ footer b{color:var(--muted);font-weight:500}
         <button class="copy js-copy2" type="button" data-copy="三井住友銀行 池袋支店 普通 3807589 ユ・ドンワン" data-i18n="copy2">계좌번호 복사</button>
       </div>
     </div>
-    <p class="note" data-i18n="giveNote">지난 6월 블레싱힐 페스티벌 후원금의 사용 내역을 모두 공개했고, 부족한 금액은 자비량으로 채웠습니다. 이번에도 집회 후 결산을 투명하게 보고드리겠습니다.</p>
+    <p class="note" data-i18n="giveNote">지난 6월 블레싱힐 페스티벌 후원금의 사용 내역을 모두 공개했고, 부족한 금액은 자비량으로 채웠습니다. 이번에도 집회 후 2주 안에 결산을 공개하겠습니다.</p>
   </section>
 
   <section id="next" aria-labelledby="h-next">
@@ -580,7 +609,14 @@ const JA = {
   map: "NAVERマップで見る ↗",
   dtPark: "駐車場", ddPark: "ポンネ（蓬莱）小学校の駐車場<small>週末は無料 · 教会まで徒歩2〜3分</small>",
   dtJoin: "参加", ddJoin: "事前申込制 · 参加無料",
-  dtTeam: "奉仕チーム", ddTeam: "福岡の奉仕者と中高生・青年の賛美チーム 約15名<small>4泊5日で釜山へ行きます</small>",
+  dtTeam: "奉仕チーム", ddTeam: "福岡の奉仕者と中高生・青年の賛美チーム 13名<small>11月6日（金）〜9日（月）、3泊4日で釜山に滞在します</small>",
+  dtWord: "メッセージ", ddWord: "イヌブセ・セイイチ牧師<small>スヨンロ教会 日本語礼拝</small>",
+  focusNet: "礼拝に加えて、日本のために祈り、計画しておられる方々と顔を合わせて祈り、<span class=\"hl\">実際的な宣教ネットワーク</span>を築いていく始まりになることを願っています。",
+  kProg: "プログラム", hProg: "午後4時、こんな流れでささげます",
+  progList: '<li><time>16:00</time><div><b>開会のあいさつと祈り</b></div></li><li><time>16:05</time><div><b>ブライトホープ 日本語賛美</b><small>30分 · 賛美8曲</small></div></li><li><time>16:35</time><div><b>証し · 祈り · メッセージ</b><small>メッセージ · イヌブセ・セイイチ牧師（スヨンロ教会 日本語礼拝）</small></div></li><li><time>17:05</time><div><b>パク・ムンチュン伝道師 賛美と証し</b><small>40分 · 賛美6曲</small></div></li><li><time>17:45</time><div><b>祈りの時間</b></div></li><li><time>18:00</time><div><b>祝福の歌と閉会の祈り</b></div></li><li><time>18:10</time><div><b>交わりの時間</b></div></li>',
+  progNote: "順序と時間は、当日の状況により変更になることがあります。",
+  why2b: "日本の教会と韓国の教会は、置かれている事情や立場がそれぞれ異なり、現実的な限界もあって、協力が難しかったり、実を結びにくかったりする時間が長く続いてきました。だからこそ、まずは顔を合わせ、共に礼拝し祈る場所から<span class=\"hl\">関係を始めたい</span>と願っています。",
+  status: "これまでに <b>57件 · 151名</b>のお申し込みがありました。釜山の外、40か所以上からも一緒に参加されます。<small>10月26日現在</small>",
   dtHost: "主催", host: "日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ワーシップネーションズ",
   kWhy: "なぜ釜山へ行くのか",
   hWhy: "飛行機でわずか1時間。<br>そこに、共に賛美する<br>仲間がいます",
@@ -605,27 +641,20 @@ const JA = {
   ctaForm: "申込書に記入する",
   pending: "申込書のリンクはまもなく公開されます。",
   kPray: "祈りの課題", hPray: "何よりもまず、祈りで共に歩んでください",
-  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">奉仕チームの航空券・宿泊と必要な資金が満たされ、4泊5日のすべての移動と健康が守られるように</li>',
+  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">この出会いが、日本のために祈り計画しておられる方々とつながる、宣教ネットワークの始まりとなるように</li><li data-n="7">奉仕チームの航空券・宿泊と必要な資金が満たされ、3泊4日のすべての移動と健康が守られるように</li>',
   room: "<b>カカオトークの祈りのグループで一緒に祈りましょう</b>より詳しい祈りの課題と準備の様子をシェアしています。どなたでも参加できます（カカオトークのアプリが必要です）。",
   roomBtn: "祈りのグループに参加する",
   kGive: "ご支援", hGive: "祈りとともに、献金でも共に歩んでください",
-  giveLead: "福岡の奉仕チームが釜山へ行き、韓国の兄弟姉妹と共に礼拝し祈ることができるよう、祈りと献金の両面から、両国の次世代をつなぐ架け橋を共に架けていただけますよう、心よりお願い申し上げます。",
-  budgetLabel: "必要な予算",
-  ppLab: "一人を送り出すために", ppVal: "約40万ウォン",
-  ppText: "福岡から釜山へ向かう奉仕チーム一人あたりの、4泊5日の最低限の航空・滞在費です。礼拝と奉仕のための一歩に、皆さまの温かい思いを寄せてください。",
-  goal: "必要な予算の合計 <b>900万ウォン</b> · 小さな献金も尊い同労です",
-  budgetMore: "予算の内訳を見る",
-  b1: "航空・滞在費（奉仕チーム15名、4泊5日）", b1v: "600万ウォン",
-  b2: "当日の音響・施設運営費", b2v: "200万ウォン",
-  b3: "通訳・広報費", b3v: "100万ウォン",
-  bt: "合計", btv: "900万ウォン",
+  giveLead: "共に行く奉仕者たちは、信徒として自費で仕えており、一つの家庭から2〜3名が一緒に参加する場合もあります。ゆとりがなくても、神さまが喜ばれる賛美の働きとなるよう祈りつつ、費用はためらわずに負担したいと思っています。",
+  giveLead2: "ただ、経済的な支援が難しい日本の教会の事情から、負担は現実のものです。特に中高生と教職者の負担が軽くなるよう祈っています。<span class=\"hl\">この出会いが宣教ネットワークへとつながっていく</span>ために、共に歩んでいただけたら感謝です。",
+  fund: "必要な資金の <b>約16%</b>が集まりました<small>10月26日現在</small>",
   w1lab: "オンライン献金", w1h: "ミッションファンドで支援する",
   w1list: "<li>韓国の寄付金領収書を発行できます</li><li>献金の5%は、他の国で働く宣教師を支える世界宣教基金に用いられます</li>",
   w1btn: "ミッションファンドで支援する ↗",
   w3lab: "日本の口座（円）", acctJp: "三井住友銀行 池袋支店 普通 3807589", w3holder: "口座名義 ユ・ドンワン · 日本国内からの円でのお振込み", copy2: "口座番号をコピー",
   w2lab: "口座振込（韓国の銀行）", acct: "ウリ銀行 1002-160-487259", w2holder: "口座名義 イ・ドンハ（이동하）",
   copy: "口座番号をコピー",
-  giveNote: "6月のブレッシングヒル・フェスティバルでは献金の使いみちをすべて公開し、不足分は自費でまかないました。今回も集会後に決算を誠実にご報告します。",
+  giveNote: "6月のブレッシングヒル・フェスティバルでは献金の使いみちをすべて公開し、不足分は自費でまかないました。今回も集会後2週間以内に決算を公開します。",
   hNext: "次の物語は<br>福岡・天神で",
   nextLead: "釜山で結ばれた交わりは、2027年、私たちの街・福岡天神でのブレッシングヒル・フェスティバルへと続きます。今度は福岡で、日韓の仲間たちと共に賛美します。詳しくはまもなくお知らせします。",
   footHost: "主催 日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ワーシップネーションズ",
