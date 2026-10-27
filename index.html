@@ -175,6 +175,15 @@ details.budget-more{margin-bottom:22px;border:0}
 .dl-btn em{font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--faint)}
 .dl-btn:hover{background:rgba(158,216,245,.1)}
 .dl-btn:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.acc-hint{font-size:13px;color:var(--faint);margin:20px 0 6px}
+.song-acc{margin-top:0}
+.song-acc summary{font-size:18px}
+.song-acc .acc-body{padding:0 0 18px}
+.song-acc .songs{margin:6px 0 0}
+.song-acc .songs-hint{margin:2px 0 6px}
+.songs-sub{font-size:18px;margin:30px 0 -8px}
+.songs-hint{font-size:14px;color:var(--muted);margin:14px 0 -8px}
+.song .soon{font-size:13px;font-weight:700;color:var(--faint);border:1px dashed var(--line);border-radius:999px;padding:8px 14px;white-space:nowrap}
 .songs-more{margin-top:16px;font-size:14px;color:var(--muted)}
 .songs-more a{font-weight:700}
 .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--sky);border:1px solid rgba(158,216,245,.5);border-radius:999px;padding:3px 10px;margin-bottom:6px}
@@ -330,7 +339,7 @@ footer b{color:var(--muted);font-weight:500}
       <dt data-i18n="dtWhere">장소</dt><dd><span data-i18n="ddWhere">부산 영주교회 본당</span><small>부산 중구 대영로226번안길 6</small><a href="https://naver.me/FXnGOx2v" target="_blank" rel="noopener" data-i18n="map">네이버 지도에서 보기 ↗</a></dd>
       <dt data-i18n="dtPark">주차</dt><dd data-i18n="ddPark">봉래초등학교 주차장<small>주말 무료 · 교회까지 걸어서 2–3분</small></dd>
       <dt data-i18n="dtJoin">참가</dt><dd><span data-i18n="ddJoin">사전 신청제 · 참가비 무료</span><small class="js-deadline-text"></small></dd>
-      <dt data-i18n="dtTeam">방문팀</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 13명<small>11월 6일(금)–9일(월), 3박 4일 동안 부산에 머뭅니다</small></dd>
+      <dt data-i18n="dtTeam">방문팀</dt><dd data-i18n="ddTeam">일본 후쿠오카 사역자·청소년 찬양팀 13명 확정<small>일본 교회 성도와 청소년 찬양팀, 그리고 침례연맹 청년회 임원을 오래 섬겨 온 일본인 사역자·선교사님도 함께 갑니다<br>11월 6일(금)–9일(월), 3박 4일 동안 부산에 머뭅니다</small></dd>
       <dt data-i18n="dtWord">말씀</dt><dd data-i18n="ddWord">이누부세 세이치 목사님<small>수영로교회 일본어예배</small></dd>
       <dt data-i18n="dtHost">주최</dt><dd data-i18n="host">일본선교연구소 · 에클레시아 · 블레싱힐 미니스트리 · 워십네이션스</dd>
     </dl>
@@ -340,7 +349,7 @@ footer b{color:var(--muted);font-weight:500}
     <div class="kicker" data-i18n="kFocus">이 집회의 중심</div>
     <h2 id="h-focus" data-i18n="hFocus">함께 예배하는 기쁨으로 초대합니다</h2>
     <p class="lead focus-line" data-i18n="focusLine">살아계신 주 예수 그리스도께 <span class="hl">영광</span>을 돌리고, 성령의 <span class="hl">능력</span>을 구하며, 한 사람 한 사람이 인격적인 하나님을 <span class="hl">만나는</span> 기쁨의 예배를 기대합니다. 그리고 일본과 그 땅에서 살아가는 영혼들, 일본의 교회와 예배를 위해 함께 마음을 모아 기도하길 원합니다.</p>
-    <p class="lead" style="margin-top:16px" data-i18n="focusNet">예배에 더해, 일본을 위해 기도하고 계획하는 분들과 얼굴을 마주하고 기도하며 <span class="hl">실제적인 선교 네트워크</span>를 만들어 가는 시작이 되길 바랍니다.</p>
+    <p class="lead" style="margin-top:16px" data-i18n="focusNet">하나님을 찬양하고 예배를 드리며, 일본을 위해 기도하고 계획하고 계신 분들과 후쿠오카 선교현장 최전선의 사역자들이 직접 만나 소통과 관계를 시작하는 시간입니다. 얼굴을 마주하고 기도하며 <span class="hl">실제적인 일본선교 네트워크</span>를 만들어 가려 합니다.</p>
   </section>
 
   <section id="program" aria-labelledby="h-prog">
@@ -348,11 +357,11 @@ footer b{color:var(--muted);font-weight:500}
     <h2 id="h-prog" data-i18n="hProg">오후 4시, 이렇게 드립니다</h2>
     <ol class="prog" data-i18n="progList">
       <li><time>16:00</time><div><b>시작 인사와 기도</b></div></li>
-      <li><time>16:05</time><div><b>Bright Hope 일본어 찬양</b><small>30분 · 찬양 8곡</small></div></li>
-      <li><time>16:35</time><div><b>간증 · 기도 · 말씀</b><small>말씀 · 이누부세 세이치 목사님 (수영로교회 일본어예배)</small></div></li>
-      <li><time>17:05</time><div><b>박문춘 전도사 찬양과 간증</b><small>40분 · 찬양 6곡</small></div></li>
+      <li><time>16:05</time><div><b>Bright Hope 찬양과 간증</b><small>40분 · 찬양 8곡</small></div></li>
+      <li><time>16:35</time><div><b>기도 · 설교말씀</b><small>말씀 · 이누부세 세이치 목사님 (수영로교회 일본어예배)</small></div></li>
+      <li><time>17:05</time><div><b>박문춘 전도사 찬양과 간증</b><small>40분 · 찬양 6곡 (축복송 포함)</small></div></li>
       <li><time>17:45</time><div><b>기도 인도</b></div></li>
-      <li><time>18:00</time><div><b>축복송과 마무리 기도</b></div></li>
+      <li><time>18:00</time><div><b>축복송과 마무리 기도</b><small>축복송 · 아주 먼 옛날</small></div></li>
       <li><time>18:10</time><div><b>교제의 시간</b></div></li>
     </ol>
     <p class="note" data-i18n="progNote">순서와 시간은 현장 사정에 따라 조정될 수 있어요.</p>
@@ -363,7 +372,7 @@ footer b{color:var(--muted);font-weight:500}
     <h2 id="h-why" data-i18n="hWhy">비행기로 1시간,<br>그런데 전혀 다른 풍경</h2>
     <p class="lead" data-i18n="why1">일본은 그리스도인이 인구의 <span class="hl">0.4%</span>에도 미치지 못하는 나라입니다. 골목마다 신사와 절이 있지만 십자가를 찾기는 어렵고, 고령화로 교회에서 또래 친구를 만나기도 쉽지 않습니다.</p>
     <p class="lead" data-i18n="why2">이번에 부산을 찾는 브라이트호프와 워십네이션스의 청소년·청년들은 그 안에서도 "찬양으로 하나님을 예배하겠다"는 부르심을 품은 이들입니다.</p>
-    <p class="lead" data-i18n="why2b">일본교회와 한국교회는 처한 사정과 입장이 서로 다르고 현실적인 한계도 있어, 협력이 어렵거나 열매로 이어지기 힘든 시간이 오래 이어져 왔습니다. 그래서 먼저 얼굴을 마주하고 함께 예배하고 기도하는 자리에서 <span class="hl">관계를 시작</span>하려 합니다.</p>
+    <p class="lead" data-i18n="why2b">사실 일본교회와 한국교회는 사역의 관점이 서로 다릅니다. 일본교회는 6개월~1년 전부터 계획해 장기적으로 사역하려는 반면, 한국교회는 단기선교를 위해 짧고 빠르게 일정을 잡습니다. 연결점이 없는 교회는 시작조차 어려워, 협력이 어렵고 열매로 이어지기 힘든 시간이 오래 이어져 왔습니다. 그래서 먼저 얼굴을 마주하고 함께 예배하고 기도하는 자리에서 <span class="hl">관계를 시작</span>하려 합니다.</p>
     <div class="stats">
       <div class="stat"><b>0.4%</b><span data-i18n="st1">일본의 그리스도인 비율</span></div>
       <div class="stat"><b>214km</b><span data-i18n="st2">부산–후쿠오카 직선거리</span></div>
@@ -431,8 +440,13 @@ footer b{color:var(--muted);font-weight:500}
   <section id="songs" aria-labelledby="h-songs">
     <div class="kicker" data-i18n="kSongs">함께 부를 찬양</div>
     <h2 id="h-songs" data-i18n="hSongs">찬양 리스트와 악보</h2>
-    <p class="lead" data-i18n="songsLead">브라이트호프 찬양팀이 이날 부를 찬양 여덟 곡이에요. 악보를 내려받아 미리 함께 불러 보세요.</p>
-    <ol class="songs">
+    <p class="lead" data-i18n="songsLead">이날 부를 찬양이에요. 악보를 내려받아 미리 함께 불러 보세요.</p>
+    <p class="acc-hint" data-i18n="accHint">이름을 누르면 찬양 목록이 펼쳐져요</p>
+    <div class="song-acc">
+      <details open>
+        <summary><span data-i18n="subBh">Bright Hope 찬양 · 8곡</span></summary>
+        <div class="acc-body">
+<ol class="songs">
       <li class="song"><span class="no">01</span><div class="s-t"><b>Nothing is impossible</b></div><div class="dl"><a class="dl-btn js-score" data-score="01" href="https://drive.google.com/uc?export=download&amp;id=1l5zaZRzh0qu4eMgNVJnAGgSWRlx-o-tC" rel="noopener"><span data-i18n="dlOrig">원본 악보</span><em>PNG</em></a><a class="dl-btn js-score" data-score="01-jp" href="https://drive.google.com/uc?export=download&amp;id=1U3LkCpeqzd19zK3havKiCUelMph9D9ce" rel="noopener"><span data-i18n="dlJp">일본어 악보</span><em>PNG</em></a></div></li>
       <li class="song"><span class="no">02</span><div class="s-t"><b lang="ja">賛美せよ</b><small data-i18n="n02">한국어로 불러요 · G키</small></div><div class="dl"><a class="dl-btn js-score" data-score="02" href="https://drive.google.com/uc?export=download&amp;id=1bVy_acWdeTR2fwfp_JGRiIv15gMG-VXp" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PNG</em></a></div></li>
       <li class="song"><span class="no">03</span><div class="s-t"><b lang="ja">エリヤの日</b><small data-i18n="n03">Days of Elijah 일본어판</small></div><div class="dl"><a class="dl-btn js-score" data-score="03" href="https://drive.google.com/uc?export=download&amp;id=1uwP-4qOTS0Z9nYXgV4DoyLl7XHRltv-p" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
@@ -442,14 +456,38 @@ footer b{color:var(--muted);font-weight:500}
       <li class="song"><span class="no">07</span><div class="s-t"><b lang="ja">あなたの言う通り</b></div><div class="dl"><a class="dl-btn js-score" data-score="07" href="https://drive.google.com/uc?export=download&amp;id=1xN-PcD4H1cYbFaNSi1bjl08iHzxJ9o3W" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PNG</em></a></div></li>
       <li class="song"><span class="no">08</span><div class="s-t"><b lang="ja">御腕に抱いて</b><small data-i18n="n08">A키</small></div><div class="dl"><a class="dl-btn js-score" data-score="08" href="https://drive.google.com/uc?export=download&amp;id=1IxTeRq8ZSvkJHgN5zMcAZVzfq3zXIBKA" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
     </ol>
-    <p class="songs-more"><a href="https://drive.google.com/drive/folders/1bZwtIM0n2ywBpI6NiwQMFOKczsDgu14r" target="_blank" rel="noopener" data-i18n="songsFolder">구글 드라이브에서 악보 전체 보기 ↗</a><br><span data-i18n="songsNote">곡 순서는 당일 바뀔 수 있어요.</span></p>
+        </div>
+      </details>
+      <details>
+        <summary><span data-i18n="subPark">박문춘 전도사 찬양 · 5곡</span></summary>
+        <div class="acc-body">
+<ol class="songs">
+      <li class="song"><span class="no">01</span><div class="s-t"><b>나는 예배자입니다</b><small data-i18n="nJa">일본어로 불러요</small></div><div class="dl"><a class="dl-btn js-score" data-score="p01" href="https://drive.google.com/uc?export=download&amp;id=1LTJSMvSaI9C4m9_Hjr2851BfwWdrs5-J" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">02</span><div class="s-t"><b>나 같은 죄인 살리신</b><small data-i18n="nEnJa">영어 + 일본어로 불러요</small></div><div class="dl"><a class="dl-btn js-score" data-score="p02" href="https://drive.google.com/file/d/1x6EelolAHQbOdC3kaXOh_hmUqJ-j3C5s/view" target="_blank" rel="noopener"><span data-i18n="dlView">악보 보기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">03</span><div class="s-t"><b>은혜</b><small data-i18n="nJa">일본어로 불러요</small></div><div class="dl"><a class="dl-btn js-score" data-score="p03" href="https://drive.google.com/uc?export=download&amp;id=1C9tWCqcOXg91u1dUcwJT9P04M35vTWLb" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">04</span><div class="s-t"><b>예수 우리들의 밝은 빛</b><small data-i18n="nJa">일본어로 불러요</small></div><div class="dl"><a class="dl-btn js-score" data-score="p04" href="https://drive.google.com/uc?export=download&amp;id=1nEt3beimZJKUhtM3SudwmDggvIfTCji5" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+      <li class="song"><span class="no">05</span><div class="s-t"><b>누구도 본 적이 없는</b><small data-i18n="nJa">일본어로 불러요</small></div><div class="dl"><a class="dl-btn js-score" data-score="p05" href="https://drive.google.com/uc?export=download&amp;id=1In6QHj73mgjKoTuynjNzBQPh0DBnX-LV" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+    </ol>
+        </div>
+      </details>
+      <details>
+        <summary><span data-i18n="subBless">함께 부르는 축복송</span></summary>
+        <div class="acc-body">
+<p class="songs-hint" data-i18n="blessHint">기도 인도가 끝난 뒤 다 함께 부릅니다.</p>
+<ol class="songs">
+      <li class="song"><span class="no">06</span><div class="s-t"><b>아주 먼 옛날</b><small data-i18n="nJa">일본어로 불러요</small></div><div class="dl"><a class="dl-btn js-score" data-score="p06" href="https://drive.google.com/uc?export=download&amp;id=1rFX4mcpF_CBNULCgmXeTKr_SUNvurHLy" rel="noopener"><span data-i18n="dlBtn">악보 받기</span><em>PDF</em></a></div></li>
+    </ol>
+        </div>
+      </details>
+    </div>
+    <p class="songs-more"><a href="https://drive.google.com/drive/folders/1bZwtIM0n2ywBpI6NiwQMFOKczsDgu14r" target="_blank" rel="noopener" data-i18n="songsFolder">구글 드라이브에서 악보 전체 보기 ↗</a><br><span data-i18n="songsNote">곡 순서는 당일 바뀔 수 있고, 안내된 악보와 다른 키(코드)로 부를 수도 있어요.</span></p>
   </section>
 
   <section id="apply" aria-labelledby="h-apply">
     <div class="kicker" data-i18n="kApply">신청 방법</div>
     <h2 id="h-apply" data-i18n="hApply">신청서 한 장이면 충분해요</h2>
     <!-- 신청 현황: 숫자와 기준일은 직접 고쳐 주세요 (JA 문구는 아래 JA.status) -->
-    <p class="status" data-i18n="status">지금까지 <b>57건 · 151명</b>이 신청했어요. 부산 밖 40여 곳에서도 함께합니다.<small>10월 26일 기준</small></p>
+    <p class="status" data-i18n="status">지금까지 <b>57건 · 151명</b>이 신청했어요. 신청서의 <b>70% 가까이</b>가 청년이고, 교회와 단체 <b>40여 곳</b>이 부산 밖에서도 신청해 주셨습니다.<small>10월 26일 기준</small></p>
     <ol class="steps">
       <li><b data-i18n="s1">아래 버튼으로 신청서를 여세요</b><span data-i18n="s1d">개인 신청도, 교회·팀 단위 신청도 한 신청서에서 받습니다.</span></li>
       <li><b data-i18n="s2">1–2분이면 작성할 수 있어요</b><span data-i18n="s2d">단체라면 대표자 한 분이 전체 인원만 적어 주세요.</span></li>
@@ -472,7 +510,7 @@ footer b{color:var(--muted);font-weight:500}
       <li data-n="3">성령의 능력이 임하여, 한일 다음 세대가 언어와 국경을 넘어 예수 안에서 하나 되도록</li>
       <li data-n="4">찬양과 간증으로 섬기는 모든 사역자가 오직 예수님만 자랑하도록</li>
       <li data-n="5">일본과 그 땅에서 살아가는 영혼들에게 복음의 길이 열리고, 일본의 교회와 예배가 새롭게 일어나도록</li>
-      <li data-n="6">이 만남이 일본을 위해 기도하고 계획하는 분들과 이어지는 선교 네트워크의 시작이 되도록</li>
+      <li data-n="6">이 만남이 일본을 위해 기도하고 계획하는 분들과 이어지는 일본선교 네트워크의 시작이 되도록</li>
       <li data-n="7">방문팀의 항공·숙소와 필요한 재정이 채워지고, 3박 4일의 모든 이동과 건강이 지켜지도록</li>
     </ul>
     <div class="pray-room">
@@ -484,8 +522,8 @@ footer b{color:var(--muted);font-weight:500}
   <section id="give" aria-labelledby="h-give">
     <div class="kicker" data-i18n="kGive">후원</div>
     <h2 id="h-give" data-i18n="hGive">기도와 함께, 물질로도 동역해 주세요</h2>
-    <p class="lead" data-i18n="giveLead">함께 가는 사역자들은 평신도로서 자비량으로 섬기고 있고, 한 가정에서 2~3명이 함께 가기도 합니다. 넉넉하지 않은 형편에도 하나님이 기뻐하시는 찬양 사역이 되길 기도하며, 비용은 망설임 없이 감당하려 합니다.</p>
-    <p class="lead" data-i18n="giveLead2">다만 재정 지원이 어려운 일본교회의 형편상 부담은 현실입니다. 특히 청소년과 교역자의 부담을 덜 수 있기를 기도하고 있으며, <span class="hl">이 만남이 선교 네트워크로 이어지도록</span> 함께해 주시면 감사하겠습니다.</p>
+    <p class="lead" data-i18n="giveLead">함께 가는 사역자들은 대부분 자비량으로 섬기는 평신도로, 한 가정에서 2~3명이 함께 가기도 합니다. 넉넉하지 않은 형편에도 하나님이 기뻐하시는 찬양 사역이 되길 기도하며, 비용은 망설임 없이 감당하려 합니다.</p>
+    <p class="lead" data-i18n="giveLead2">다만 재정 지원이 어려운 일본교회 형편상 해외에서의 자비량 사역의 부담은 현실입니다. 특히 청소년과 교역자의 부담을 덜 수 있기를 기도합니다. <span class="hl">본 사역이 개인의 부담을 줄이고 지속적인 선교 네트워크로 이어지도록</span> 물심양면으로 함께 동역해 주시면 감사하겠습니다.</p>
     <!-- 모금 현황: width 숫자(%)와 기준일을 직접 고쳐 주세요 -->
     <div class="fund">
       <p class="fund-t" data-i18n="fund">필요한 재정 중 <b>약 16%</b>가 모였습니다<small>10월 26일 기준</small></p>
@@ -609,14 +647,14 @@ const JA = {
   map: "NAVERマップで見る ↗",
   dtPark: "駐車場", ddPark: "ポンネ（蓬莱）小学校の駐車場<small>週末は無料 · 教会まで徒歩2〜3分</small>",
   dtJoin: "参加", ddJoin: "事前申込制 · 参加無料",
-  dtTeam: "奉仕チーム", ddTeam: "福岡の奉仕者と中高生・青年の賛美チーム 13名<small>11月6日（金）〜9日（月）、3泊4日で釜山に滞在します</small>",
+  dtTeam: "奉仕チーム", ddTeam: "福岡の奉仕者と中高生・青年の賛美チーム 13名が確定<small>日本の教会の信徒と中高生の賛美チームに加え、バプテスト連盟の青年会役員を長く務めてきた日本人の奉仕者・宣教師も同行します<br>11月6日（金）〜9日（月）、3泊4日で釜山に滞在します</small>",
   dtWord: "メッセージ", ddWord: "イヌブセ・セイイチ牧師<small>スヨンロ教会 日本語礼拝</small>",
-  focusNet: "礼拝に加えて、日本のために祈り、計画しておられる方々と顔を合わせて祈り、<span class=\"hl\">実際的な宣教ネットワーク</span>を築いていく始まりになることを願っています。",
+  focusNet: "神さまを賛美し礼拝をささげながら、日本のために祈り、計画しておられる方々と、福岡の宣教現場の最前線で働く奉仕者たちが、直接出会って対話し、関係を始める時間です。顔を合わせて祈り、<span class=\"hl\">実際的な日本宣教ネットワーク</span>を築いていこうとしています。",
   kProg: "プログラム", hProg: "午後4時、こんな流れでささげます",
-  progList: '<li><time>16:00</time><div><b>開会のあいさつと祈り</b></div></li><li><time>16:05</time><div><b>ブライトホープ 日本語賛美</b><small>30分 · 賛美8曲</small></div></li><li><time>16:35</time><div><b>証し · 祈り · メッセージ</b><small>メッセージ · イヌブセ・セイイチ牧師（スヨンロ教会 日本語礼拝）</small></div></li><li><time>17:05</time><div><b>パク・ムンチュン伝道師 賛美と証し</b><small>40分 · 賛美6曲</small></div></li><li><time>17:45</time><div><b>祈りの時間</b></div></li><li><time>18:00</time><div><b>祝福の歌と閉会の祈り</b></div></li><li><time>18:10</time><div><b>交わりの時間</b></div></li>',
+  progList: "<li><time>16:00</time><div><b>開会のあいさつと祈り</b></div></li><li><time>16:05</time><div><b>ブライトホープ 賛美と証し</b><small>40分 · 賛美8曲</small></div></li><li><time>16:35</time><div><b>祈り · メッセージ</b><small>メッセージ · イヌブセ・セイイチ牧師（スヨンロ教会 日本語礼拝）</small></div></li><li><time>17:05</time><div><b>パク・ムンチュン伝道師 賛美と証し</b><small>40分 · 賛美6曲（祝福の歌を含む）</small></div></li><li><time>17:45</time><div><b>祈りの時間</b></div></li><li><time>18:00</time><div><b>祝福の歌と閉会の祈り</b></div></li><li><time>18:10</time><div><b>交わりの時間</b></div></li>",
   progNote: "順序と時間は、当日の状況により変更になることがあります。",
-  why2b: "日本の教会と韓国の教会は、置かれている事情や立場がそれぞれ異なり、現実的な限界もあって、協力が難しかったり、実を結びにくかったりする時間が長く続いてきました。だからこそ、まずは顔を合わせ、共に礼拝し祈る場所から<span class=\"hl\">関係を始めたい</span>と願っています。",
-  status: "これまでに <b>57件 · 151名</b>のお申し込みがありました。釜山の外、40か所以上からも一緒に参加されます。<small>10月26日現在</small>",
+  why2b: "実は、日本の教会と韓国の教会は、奉仕の捉え方が異なります。日本の教会は半年〜1年前から計画し、長期的に働こうとするのに対し、韓国の教会は短期宣教のために短く素早く日程を組みます。つながりのない教会は、始めることさえ難しく、協力が難しく実を結びにくい時間が長く続いてきました。だからこそ、まずは顔を合わせ、共に礼拝し祈る場所から<span class=\"hl\">関係を始めたい</span>と願っています。",
+  status: "これまでに <b>57件 · 151名</b>のお申し込みがありました。申込書の<b>7割近く</b>が青年で、教会・団体<b>40か所以上</b>が釜山の外からもお申し込みくださいました。<small>10月26日現在</small>",
   dtHost: "主催", host: "日本宣教研究所 · エクレシア · ブレッシングヒル・ミニストリー · ワーシップネーションズ",
   kWhy: "なぜ釜山へ行くのか",
   hWhy: "飛行機でわずか1時間。<br>そこに、共に賛美する<br>仲間がいます",
@@ -630,9 +668,13 @@ const JA = {
   whoNote: "言葉が違っても大丈夫。はじめて聞く歌詞でも、私たちは同じ神さまを賛美します。",
   kSongs: "一緒に歌う賛美",
   hSongs: "賛美リストと楽譜",
-  songsLead: "ブライトホープ賛美チームが当日歌う8曲です。楽譜をダウンロードして、事前に一緒に歌ってみてください。",
+  songsLead: "当日歌う賛美です。楽譜をダウンロードして、事前に一緒に歌ってみてください。",
+  subBh: "ブライトホープ 賛美 · 8曲", subPark: "パク・ムンチュン伝道師 賛美 · 5曲", subBless: "共に歌う祝福の歌", blessHint: "祈りの時間のあと、みんなで一緒に歌います。",
+  accHint: "名前をタップすると賛美リストが開きます",
+  dlView: "楽譜を見る",
+  nJa: "日本語で歌います", nEnJa: "英語＋日本語で歌います", soon: "楽譜は準備中",
   dlOrig: "原曲の楽譜", dlJp: "日本語の楽譜", n02: "韓国語で歌います · Gキー", dlBtn: "楽譜をダウンロード", n03: "Days of Elijah 日本語版", n05: "Open the Eyes of My Heart 日本語版", n06: "英語の楽譜", n08: "Aキー",
-  songsFolder: "Googleドライブで楽譜をまとめて見る ↗", songsNote: "曲順は当日変わることがあります。",
+  songsFolder: "Googleドライブで楽譜をまとめて見る ↗", songsNote: "曲順は当日変わることがあり、案内した楽譜とは異なるキー（コード）で歌う場合もあります。",
   kApply: "お申し込み方法", hApply: "釜山で参加される方は、こちらからお申し込みください",
   s1: "下のボタンから申込書を開いてください", s1d: "個人でも、教会・チーム単位でも、同じ申込書で受け付けています。",
   s2: "1〜2分で記入できます", s2d: "団体の場合は、代表者お一人が全体の人数だけご記入ください。",
@@ -641,12 +683,12 @@ const JA = {
   ctaForm: "申込書に記入する",
   pending: "申込書のリンクはまもなく公開されます。",
   kPray: "祈りの課題", hPray: "何よりもまず、祈りで共に歩んでください",
-  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">この出会いが、日本のために祈り計画しておられる方々とつながる、宣教ネットワークの始まりとなるように</li><li data-n="7">奉仕チームの航空券・宿泊と必要な資金が満たされ、3泊4日のすべての移動と健康が守られるように</li>',
+  prayers: '<li data-n="1">生きておられる主イエス・キリストがこの礼拝の主となり、すべての栄光を受けてくださるように</li><li data-n="2">参加する一人ひとりが人格的な神さまと出会い、イエス・キリストを自分の主と告白できるように</li><li data-n="3">聖霊の力が注がれ、日韓の次世代が言葉と国境を越えて、イエスさまの中で一つとなるように</li><li data-n="4">賛美と証しで仕えるすべての奉仕者が、ただイエスさまだけを誇るように</li><li data-n="5">日本とそこに生きる一人ひとりのたましいに福音の道が開かれ、日本の教会と礼拝が新しくされるように</li><li data-n="6">この出会いが、日本のために祈り計画しておられる方々とつながる、日本宣教ネットワークの始まりとなるように</li><li data-n="7">奉仕チームの航空券・宿泊と必要な資金が満たされ、3泊4日のすべての移動と健康が守られるように</li>',
   room: "<b>カカオトークの祈りのグループで一緒に祈りましょう</b>より詳しい祈りの課題と準備の様子をシェアしています。どなたでも参加できます（カカオトークのアプリが必要です）。",
   roomBtn: "祈りのグループに参加する",
   kGive: "ご支援", hGive: "祈りとともに、献金でも共に歩んでください",
-  giveLead: "共に行く奉仕者たちは、信徒として自費で仕えており、一つの家庭から2〜3名が一緒に参加する場合もあります。ゆとりがなくても、神さまが喜ばれる賛美の働きとなるよう祈りつつ、費用はためらわずに負担したいと思っています。",
-  giveLead2: "ただ、経済的な支援が難しい日本の教会の事情から、負担は現実のものです。特に中高生と教職者の負担が軽くなるよう祈っています。<span class=\"hl\">この出会いが宣教ネットワークへとつながっていく</span>ために、共に歩んでいただけたら感謝です。",
+  giveLead: "共に行く奉仕者たちは、その多くが自費で仕える信徒で、一つの家庭から2〜3名が一緒に参加する場合もあります。ゆとりがなくても、神さまが喜ばれる賛美の働きとなるよう祈りつつ、費用はためらわずに負担したいと思っています。",
+  giveLead2: "ただ、経済的な支援が難しい日本の教会の事情から、海外での自費による奉仕の負担は現実のものです。特に中高生と教職者の負担が軽くなるよう祈っています。<span class=\"hl\">この働きが個人の負担を減らし、継続的な宣教ネットワークへとつながっていく</span>ために、物心両面で共に歩んでいただけたら感謝です。",
   fund: "必要な資金の <b>約16%</b>が集まりました<small>10月26日現在</small>",
   w1lab: "オンライン献金", w1h: "ミッションファンドで支援する",
   w1list: "<li>韓国の寄付金領収書を発行できます</li><li>献金の5%は、他の国で働く宣教師を支える世界宣教基金に用いられます</li>",
